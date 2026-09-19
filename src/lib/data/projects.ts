@@ -17,7 +17,11 @@ export type Project = {
 	tech: string[];
 	github?: string;
 	demo?: string;
+	docs?: string;
 	preview?: string;
+	previewType?: 'desktop' | 'mobile';
+	/** Real pixel dimensions of `preview`, used to size the desktop frame with no crop/letterbox. */
+	previewDimensions?: { width: number; height: number };
 	images?: ProjectImage[];
 	status: ProjectStatus;
 	highlights?: ProjectHighlight[];
@@ -34,21 +38,21 @@ export const PROJECTS: Project[] = [
 				'Serviço centralizado de gestão de identidade com painel administrativo e API JWT. Suporta refresh tokens via cookies HttpOnly, ciclo de vida de usuários, Swagger e métricas via Actuator.'
 		},
 		tech: ['Java', 'Spring Boot', 'Spring Security', 'React', 'TypeScript', 'JWT'],
-		github: 'https://github.com/Vinicius-Gabriel-P-Leitao/auth-server',
-		preview:
-			'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/auth-server/main/docs/auth-panel.png',
+		github: 'https://github.com/vinicius-gpl/acerola-auth',
+		preview: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-panel.png',
+		previewDimensions: { width: 1517, height: 1284 },
 		images: [
 			{
 				title: { en: 'Login', 'pt-br': 'Login' },
-				url: 'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/auth-server/main/docs/auth-login.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-login.png'
 			},
 			{
 				title: { en: 'Metadata', 'pt-br': 'Metadados' },
-				url: 'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/auth-server/main/docs/auth-metadata.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-metadata.png'
 			},
 			{
 				title: { en: 'Admin Panel', 'pt-br': 'Painel Administrativo' },
-				url: 'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/auth-server/main/docs/auth-panel.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-panel.png'
 			}
 		],
 		highlights: [
@@ -96,21 +100,23 @@ export const PROJECTS: Project[] = [
 				'Leitor de mangá para Android em Kotlin e Jetpack Compose. Escaneia armazenamento local, processa CBZ/CBR e busca metadados no MangaDex/AniList.'
 		},
 		tech: ['Kotlin', 'Jetpack Compose', 'Rust', 'Iroh', 'Hilt', 'MangaDex API', 'AniList API'],
-		github: 'https://github.com/Vinicius-Gabriel-P-Leitao/acerola-android',
+		github: 'https://github.com/vinicius-gpl/acerola-reader/tree/main/acerola/android',
+		docs: 'https://docs.acerola-comic.com/',
 		preview:
-			'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/acerola-android/main/docs/banner/01-home.png',
+			'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/banner/01-home.png',
+		previewType: 'mobile',
 		images: [
 			{
 				title: { en: 'Home', 'pt-br': 'Início' },
-				url: 'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/acerola-android/main/docs/banner/01-home.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/banner/01-home.png'
 			},
 			{
 				title: { en: 'Reader', 'pt-br': 'Leitor' },
-				url: 'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/acerola-android/main/docs/banner/02-reader.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/banner/02-reader.png'
 			},
 			{
 				title: { en: 'Customization', 'pt-br': 'Personalização' },
-				url: 'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/acerola-android/main/docs/banner/03-customization.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/banner/03-customization.png'
 			}
 		],
 		highlights: [
@@ -156,21 +162,23 @@ export const PROJECTS: Project[] = [
 				'Leitor de quadrinhos desktop multiplataforma em Rust e Tauri. Lê CBZ, CBR e PDF, gerencia biblioteca local, faz streaming de páginas via HTTP para celular e conecta ao plugin de tradução com IA.'
 		},
 		tech: ['Rust', 'Tauri v2', 'Svelte 5', 'TypeScript', 'Iroh', 'Tailwind'],
-		github: 'https://github.com/Vinicius-Gabriel-P-Leitao/acerola-desktop',
+		github: 'https://github.com/vinicius-gpl/acerola-reader/tree/main/acerola/desktop',
+		docs: 'https://docs.acerola-comic.com/',
 		preview:
-			'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/acerola-desktop/main/docs/banner/01-home.png',
+			'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/banner/01-home.png',
+		previewDimensions: { width: 1920, height: 1080 },
 		images: [
 			{
 				title: { en: 'Home', 'pt-br': 'Início' },
-				url: 'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/acerola-desktop/main/docs/banner/01-home.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/banner/01-home.png'
 			},
 			{
 				title: { en: 'Reader', 'pt-br': 'Leitor' },
-				url: 'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/acerola-desktop/main/docs/banner/02-reader.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/banner/02-reader.png'
 			},
 			{
 				title: { en: 'History', 'pt-br': 'Histórico' },
-				url: 'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/acerola-desktop/main/docs/banner/03-history.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/banner/03-history.png'
 			}
 		],
 		highlights: [
@@ -226,7 +234,6 @@ export const PROJECTS: Project[] = [
 				'Serviço de tradução automática de mangás e webtoons. Detecta balões, executa OCR, traduz via IA (Claude / Ollama / OpenAI), aplica inpainting e redesenha a página em português brasileiro.'
 		},
 		tech: ['Go', 'Python', 'FastAPI', 'OpenCV', 'manga-ocr', 'Svelte 5', 'Docker'],
-		github: 'https://github.com/Vinicius-Gabriel-P-Leitao/acerola-translater',
 		highlights: [
 			{
 				title: { en: 'Full Pipeline', 'pt-br': 'Pipeline Completo' },
@@ -289,21 +296,21 @@ export const PROJECTS: Project[] = [
 			'Tailwind',
 			'Docker'
 		],
-		github: 'https://github.com/Vinicius-Gabriel-P-Leitao/acerola-rag',
-		preview:
-			'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/acerola-rag/main/docs/chat-print.png',
+		github: 'https://github.com/vinicius-gpl/acerola-rag',
+		preview: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-rag/main/docs/chat-print.png',
+		previewDimensions: { width: 1339, height: 601 },
 		images: [
 			{
 				title: { en: 'Chat', 'pt-br': 'Chat' },
-				url: 'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/acerola-rag/main/docs/chat-print.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-rag/main/docs/chat-print.png'
 			},
 			{
 				title: { en: 'Admin Panel', 'pt-br': 'Painel Administrativo' },
-				url: 'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/acerola-rag/main/docs/admin-print.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-rag/main/docs/admin-print.png'
 			},
 			{
 				title: { en: 'History', 'pt-br': 'Histórico' },
-				url: 'https://raw.githubusercontent.com/Vinicius-Gabriel-P-Leitao/acerola-rag/main/docs/history-print.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-rag/main/docs/history-print.png'
 			}
 		],
 		highlights: [
