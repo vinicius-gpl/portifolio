@@ -113,43 +113,39 @@
 	<!-- Field: Name -->
 	<div class="field">
 		<label for="contact-name" class="field-label flex items-center gap-1.5">
-			<User size={12} class="text-white/60" />
+			<User size={12} />
 			<span>{m['contact.name']()}</span>
 		</label>
-		<div class="input-wrapper">
-			<input
-				id="contact-name"
-				type="text"
-				bind:value={name}
-				onkeydown={handleInputKeyDown}
-				placeholder={m['contact.name_placeholder']()}
-				required
-				autocomplete="name"
-				class="field-input"
-			/>
-		</div>
+		<input
+			id="contact-name"
+			type="text"
+			bind:value={name}
+			onkeydown={handleInputKeyDown}
+			placeholder={m['contact.name_placeholder']()}
+			required
+			autocomplete="name"
+			class="field-input"
+		/>
 	</div>
 
 	<!-- Field: Email -->
 	<div class="field">
 		<label for="contact-email" class="field-label flex items-center gap-1.5">
-			<Mail size={12} class="text-white/60" />
+			<Mail size={12} />
 			<span>{m['contact.email']()}</span>
 		</label>
-		<div class="input-wrapper">
-			<input
-				id="contact-email"
-				type="email"
-				bind:value={email}
-				onblur={() => (emailTouched = true)}
-				onkeydown={handleInputKeyDown}
-				placeholder={m['contact.email_placeholder']()}
-				required
-				autocomplete="email"
-				class="field-input"
-				class:input-invalid={emailTouched && !isEmailValid}
-			/>
-		</div>
+		<input
+			id="contact-email"
+			type="email"
+			bind:value={email}
+			onblur={() => (emailTouched = true)}
+			onkeydown={handleInputKeyDown}
+			placeholder={m['contact.email_placeholder']()}
+			required
+			autocomplete="email"
+			class="field-input"
+			class:input-invalid={emailTouched && !isEmailValid}
+		/>
 		{#if emailTouched && !isEmailValid}
 			<span class="field-error">{m['contact.invalid_email']()}</span>
 		{/if}
@@ -159,40 +155,36 @@
 	<div class="field">
 		<div class="flex items-center justify-between">
 			<label for="contact-message" class="field-label flex items-center gap-1.5">
-				<MessageSquare size={12} class="text-white/60" />
+				<MessageSquare size={12} />
 				<span>{m['contact.message']()}</span>
 			</label>
-			<span class="font-mono text-[10px] text-white/40">{message.length}/1000</span>
+			<span class="counter">{message.length}/1000</span>
 		</div>
-		<div class="input-wrapper">
-			<textarea
-				id="contact-message"
-				bind:value={message}
-				onkeydown={handleInputKeyDown}
-				placeholder={m['contact.message_placeholder']()}
-				required
-				rows="4"
-				maxlength={1000}
-				class="field-input resize-none"
-			></textarea>
-		</div>
+		<textarea
+			id="contact-message"
+			bind:value={message}
+			onkeydown={handleInputKeyDown}
+			placeholder={m['contact.message_placeholder']()}
+			required
+			rows="4"
+			maxlength={1000}
+			class="field-input resize-none"
+		></textarea>
 	</div>
 
 	<!-- Field: File Attachment -->
 	<div class="field">
 		<label for="contact-file" class="field-label flex items-center gap-1.5">
-			<Paperclip size={12} class="text-white/60" />
+			<Paperclip size={12} />
 			<span>{m['contact.attachment']()}</span>
 		</label>
 
 		{#if selectedFile}
 			<div class="file-pill">
 				<div class="flex min-w-0 items-center gap-2">
-					<FileText size={14} class="shrink-0 text-indigo-400" />
-					<span class="truncate text-xs font-semibold text-white">{selectedFile.name}</span>
-					<span class="shrink-0 font-mono text-[10px] text-white/50"
-						>({(selectedFile.size / 1024).toFixed(0)} KB)</span
-					>
+					<FileText size={14} class="shrink-0" style="color: var(--color-accent)" />
+					<span class="file-name truncate">{selectedFile.name}</span>
+					<span class="file-size shrink-0">({(selectedFile.size / 1024).toFixed(0)} KB)</span>
 				</div>
 				<button
 					type="button"
@@ -206,8 +198,8 @@
 			</div>
 		{:else}
 			<label for="contact-file" class="file-dropzone">
-				<Paperclip size={14} class="text-white/50" />
-				<span class="text-xs text-white/70">{m['contact.attachment_placeholder']()}</span>
+				<Paperclip size={14} />
+				<span class="dropzone-text">{m['contact.attachment_placeholder']()}</span>
 				<input
 					id="contact-file"
 					type="file"
@@ -223,7 +215,7 @@
 	<div
 		class="mt-2 flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between"
 	>
-		<span class="hidden font-mono text-[11px] text-white/40 sm:inline-block">
+		<span class="shortcut-hint hidden sm:inline-block">
 			{m['contact.shortcut_hint']()}
 		</span>
 
@@ -233,7 +225,7 @@
 				<span>{m['contact.sending']()}</span>
 			{:else}
 				<span>{m['contact.send']()}</span>
-				<Send size={14} class="btn-icon transition-transform duration-200" />
+				<Send size={14} class="send-icon transition-transform duration-200" />
 			{/if}
 		</button>
 	</div>
@@ -250,45 +242,41 @@
 		font-size: 0.7rem;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
-		color: rgba(255, 255, 255, 0.75);
+		color: var(--color-text-muted);
 		font-weight: 700;
-	}
-
-	.input-wrapper {
-		position: relative;
-		width: 100%;
 	}
 
 	.field-input {
 		width: 100%;
 		padding: 0.75rem 1rem;
-		background: rgba(0, 0, 0, 0.5);
-		border: 1px solid rgba(255, 255, 255, 0.18);
-		border-radius: 12px;
-		color: #ffffff;
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		border-radius: 10px;
+		color: var(--color-text);
 		font-size: 0.88rem;
 		font-family: inherit;
-		transition: all 0.2s ease;
 		outline: none;
-		box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+		transition: border-color 0.15s;
 	}
 	.field-input::placeholder {
-		color: rgba(255, 255, 255, 0.35);
+		color: var(--color-text-faint);
 	}
 	.field-input:focus {
-		border-color: rgba(255, 255, 255, 0.5);
-		background: rgba(0, 0, 0, 0.7);
-		box-shadow:
-			0 0 0 3px rgba(255, 255, 255, 0.1),
-			inset 0 2px 4px rgba(0, 0, 0, 0.4);
+		border-color: var(--color-accent);
 	}
 	.field-input.input-invalid {
-		border-color: rgba(239, 68, 68, 0.7);
+		border-color: var(--color-status-in-progress);
+	}
+
+	.counter {
+		font-family: var(--font-mono);
+		font-size: 0.65rem;
+		color: var(--color-text-faint);
 	}
 
 	.field-error {
 		font-size: 0.72rem;
-		color: #f87171;
+		color: var(--ctp-red);
 	}
 
 	.file-dropzone {
@@ -297,14 +285,18 @@
 		gap: 0.6rem;
 		padding: 0.65rem 0.9rem;
 		border-radius: 10px;
-		background: rgba(0, 0, 0, 0.4);
-		border: 1px dashed rgba(255, 255, 255, 0.25);
+		background: var(--color-bg);
+		border: 1px dashed var(--color-border);
+		color: var(--color-text-muted);
 		cursor: pointer;
-		transition: all 0.2s ease;
+		transition: border-color 0.15s;
 	}
 	.file-dropzone:hover {
-		background: rgba(0, 0, 0, 0.6);
-		border-color: rgba(255, 255, 255, 0.45);
+		border-color: var(--color-border-hover);
+	}
+
+	.dropzone-text {
+		font-size: 0.78rem;
 	}
 
 	.file-pill {
@@ -313,8 +305,20 @@
 		justify-content: space-between;
 		padding: 0.55rem 0.85rem;
 		border-radius: 10px;
-		background: rgba(99, 102, 241, 0.15);
-		border: 1px solid rgba(99, 102, 241, 0.35);
+		background: var(--color-accent-soft);
+		border: 1px solid var(--color-accent);
+	}
+
+	.file-name {
+		font-size: 0.78rem;
+		font-weight: 600;
+		color: var(--color-text);
+	}
+
+	.file-size {
+		font-family: var(--font-mono);
+		font-size: 0.65rem;
+		color: var(--color-text-faint);
 	}
 
 	.btn-remove-file {
@@ -324,14 +328,21 @@
 		width: 22px;
 		height: 22px;
 		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.15);
-		color: #ffffff;
-		border: none;
+		background: transparent;
+		color: var(--color-text);
+		border: 1px solid var(--color-border);
 		cursor: pointer;
-		transition: background 0.2s;
+		transition: border-color 0.15s;
 	}
 	.btn-remove-file:hover {
-		background: rgba(239, 68, 68, 0.8);
+		border-color: var(--ctp-red);
+		color: var(--ctp-red);
+	}
+
+	.shortcut-hint {
+		font-family: var(--font-mono);
+		font-size: 0.68rem;
+		color: var(--color-text-faint);
 	}
 
 	.btn-send {
@@ -339,29 +350,25 @@
 		align-items: center;
 		justify-content: center;
 		gap: 8px;
-		padding: 0.8rem 1.6rem;
-		border-radius: 12px;
-		background: #ffffff;
-		color: #09090b;
+		padding: 0.75rem 1.6rem;
+		border-radius: 10px;
+		background: var(--color-accent);
+		color: var(--color-bg);
 		font-size: 0.88rem;
 		font-weight: 700;
 		font-family: inherit;
 		border: none;
 		cursor: pointer;
-		box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
-		transition: all 0.2s ease;
+		transition: opacity 0.15s;
 	}
 	.btn-send:hover:not(:disabled) {
-		background: #f4f4f5;
-		transform: translateY(-1.5px);
-		box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+		opacity: 0.85;
 	}
-	.btn-send:hover:not(:disabled) :global(.btn-icon) {
-		transform: translateX(2px) translateY(-1px);
+	.btn-send:hover:not(:disabled) :global(.send-icon) {
+		transform: translateX(2px);
 	}
 	.btn-send:disabled {
 		opacity: 0.5;
 		cursor: not-allowed;
-		transform: none;
 	}
 </style>
