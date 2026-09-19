@@ -8,6 +8,9 @@ export default defineConfig({
 	server: {
 		host: true
 	},
+	ssr: {
+		noExternal: ['bits-ui']
+	},
 	plugins: [
 		tailwindcss(),
 		sveltekit(),

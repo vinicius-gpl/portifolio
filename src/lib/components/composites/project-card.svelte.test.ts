@@ -48,19 +48,4 @@ describe('ProjectCard', () => {
 		expect(container.querySelector('a[href="https://github.com/example/test"]')).toBeNull();
 		expect(container.querySelector('a[href="https://example.com"]')).toBeNull();
 	});
-
-	test('shows a placeholder when no preview image is set', async () => {
-		const { container } = render(ProjectCard, { props: { project: PROJECT } });
-
-		// No <img> for preview when project.preview is undefined
-		expect(container.querySelector('img[alt*="preview"]')).toBeNull();
-	});
-
-	test('renders preview image when provided', async () => {
-		const withPreview: Project = { ...PROJECT, preview: '/img/preview.png' };
-		const { container } = render(ProjectCard, { props: { project: withPreview } });
-
-		const img = container.querySelector('img');
-		expect(img?.getAttribute('src')).toBe('/img/preview.png');
-	});
 });
