@@ -15,7 +15,7 @@
 
 <article class="grid grid-cols-1 items-center gap-8 md:grid-cols-[1fr_1.1fr]">
 	<div
-		class="overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] md:order-2"
+		class="w-[80%] justify-self-center overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] md:order-2"
 	>
 		<ProjectImage
 			src={project.preview ?? ''}
