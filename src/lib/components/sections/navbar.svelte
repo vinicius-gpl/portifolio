@@ -39,10 +39,12 @@
 </script>
 
 <header class="navbar" class:scrolled aria-label={m['nav.navigation']()}>
-	<nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-		<a href="#hero" onclick={() => select('hero')} class="brand">
-			{m['site.name']()}
-		</a>
+	<nav class="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
+		<div class="flex flex-1 items-center justify-start">
+			<a href="#hero" onclick={() => select('hero')} class="brand">
+				{m['site.name']()}
+			</a>
+		</div>
 
 		{#if !isMobile.current}
 			<ul class="nav-links">
@@ -62,17 +64,19 @@
 			</ul>
 		{/if}
 
-		<div class="lang-switcher">
-			{#each locales as locale (locale)}
-				<a
-					href={localizeHref(page.url.pathname, { locale })}
-					class="lang-btn"
-					class:active={getLocale() === locale}
-					aria-label="Switch language to {locale === 'pt-br' ? 'Portuguese' : 'English'}"
-				>
-					{locale === 'pt-br' ? 'PT' : 'EN'}
-				</a>
-			{/each}
+		<div class="flex flex-1 items-center justify-end">
+			<div class="lang-switcher">
+				{#each locales as locale (locale)}
+					<a
+						href={localizeHref(page.url.pathname, { locale })}
+						class="lang-btn"
+						class:active={getLocale() === locale}
+						aria-label="Switch language to {locale === 'pt-br' ? 'Portuguese' : 'English'}"
+					>
+						{locale === 'pt-br' ? 'PT' : 'EN'}
+					</a>
+				{/each}
+			</div>
 		</div>
 	</nav>
 </header>
