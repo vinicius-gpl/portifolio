@@ -1,31 +1,18 @@
 import type { Action } from 'svelte/action';
 import type { Section } from '$lib/store/navigation.svelte';
+import { navigation } from '$lib/store/navigation.svelte';
 
 export type IntersectOptions = {
-	section?: Section;
+	section: Section;
 	threshold?: number;
-	onEnter?: () => void;
 };
-export const intersect: Action<HTMLElement, IntersectOptions> = (node, options = {}) => {
-	const { threshold = 0.2, section, onEnter } = options;
 
-	let animated = false;
+export const intersect: Action<HTMLElement, IntersectOptions> = (node, options) => {
+	const { threshold = 0.2, section } = options;
 
 	const observer = new IntersectionObserver(
 		([entry]) => {
-			if (!entry.isIntersecting) return;
-
-			if (!animated) {
-				node.dataset.visible = 'true';
-				animated = true;
-				onEnter?.();
-			}
-
-			if (section) {
-				import('$lib/store/navigation.svelte').then(({ navigation }) => {
-					navigation.setActive(section);
-				});
-			}
+			if (entry.isIntersecting) navigation.setActive(section);
 		},
 		{ threshold }
 	);

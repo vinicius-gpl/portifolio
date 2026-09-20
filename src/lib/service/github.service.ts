@@ -14,7 +14,7 @@ export async function fetchGitHubUser(
 	try {
 		const headers: Record<string, string> = {
 			Accept: 'application/vnd.github+json',
-			'User-Agent': 'github.com/Vinicius-Gabriel-P-Leitao/portifolio'
+			'User-Agent': 'github.com/vinicius-gpl/portifolio'
 		};
 
 		if (token) headers['Authorization'] = `Bearer ${token}`;

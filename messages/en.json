@@ -16,30 +16,21 @@
 		"navigation": "Navigation"
 	},
 	"hero": {
+		"eyebrow": "Hi, my name is",
 		"role": "Full-Stack Developer",
-		"role_backend": "Backend Engineer",
-		"role_ui": "UI Craftsman",
 		"subtitle": "Full-stack web applications, backend services, and native apps.",
-		"cta_projects": "View projects",
-		"scroll_hint": "SCROLL TO NAVIGATE THE 3D TRAIL"
+		"cta_projects": "View projects"
 	},
 	"projects": {
-		"header_index": "// 01 . PROJECTS & ARCHITECTURE",
 		"title": "Projects",
 		"ideas_title": "Future Ideas",
-		"scroll_more": "Scroll to see more projects",
 		"github": "GitHub",
 		"demo": "Demo",
-		"learn_more": "Details",
+		"docs": "Docs",
+		"view_details": "View details",
 		"close": "Close",
 		"highlights": "Highlights",
-		"gallery": "Gallery",
 		"project_prefix": "PROJECT",
-		"zoom": "Zoom",
-		"zoom_aria": "Zoom screenshot",
-		"prev_screenshot": "Previous screenshot",
-		"next_screenshot": "Next screenshot",
-		"close_zoom": "Close zoom",
 		"status": {
 			"done": "Shipped",
 			"pre_release": "Pre-release",
@@ -48,7 +39,6 @@
 		}
 	},
 	"about": {
-		"header_index": "// 02 . ABOUT & TECH STACK",
 		"title": "About",
 		"bio": "Full-stack developer building modern apps. I work with TypeScript, React, Node.js and Tailwind on the frontend, Java and Spring Boot on the backend. Currently expanding into Android using Kotlin and native with Rust.",
 		"frontend": "Frontend",
@@ -57,7 +47,6 @@
 		"infra": "Infra"
 	},
 	"contact": {
-		"header_index": "// 03 . CONTACT",
 		"title": "Contact",
 		"subtitle": "Have a project in mind, a question, or just want to chat? Send a message!",
 		"status_available": "Available for projects",
@@ -71,7 +60,6 @@
 		"sending": "Sending...",
 		"copy_email": "Copy Email",
 		"email_copied": "Copied!",
-		"fast_response": "Fast response (within 24h)",
 		"shortcut_hint": "Press Ctrl + Enter to send",
 		"attachment": "Attachment (optional)",
 		"attachment_placeholder": "Attach file (PDF, PNG, JPG, DOCX, ZIP - max 5MB)",
@@ -79,13 +67,13 @@
 		"whatsapp_text": "Hello! I saw your portfolio and would like to chat.",
 		"invalid_email": "Please enter a valid email",
 		"file_read_error": "Error reading file",
-		"remove_attachment": "Remove attachment",
-		"open_form": "Send a message",
-		"mobile_drawer_hint": "Fill out the form to get in touch",
-		"close_drawer": "Close form"
+		"remove_attachment": "Remove attachment"
 	},
 	"toast": {
 		"success": "Email sent successfully!",
 		"error": "Failed to send. Try again."
+	},
+	"resume": {
+		"download": "Download Resume"
 	}
 }

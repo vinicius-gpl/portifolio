@@ -8,13 +8,10 @@
 		setLocale,
 		getLocale
 	} from '$lib/paraglide/runtime';
-	import Navbar from '$lib/components/navbar.svelte';
-	import Toast from '$lib/components/toast.svelte';
-	import Threads from '$lib/components/svelte-bits/threads.svelte';
-	import Noise from '$lib/components/svelte-bits/Noise.svelte';
+	import Navbar from '$lib/components/sections/navbar.svelte';
+	import Toast from '$lib/components/composites/toast.svelte';
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import { scrollState } from '$lib/store/scroll.svelte';
 	import * as m from '$lib/paraglide/messages';
 
 	let { children } = $props();
@@ -35,7 +32,7 @@
 				jobTitle: locale === 'pt-br' ? 'Desenvolvedor Full-Stack' : 'Full-Stack Developer',
 				description: m['site.description'](),
 				url: 'https://vinicius-gpl.com',
-				sameAs: ['https://github.com/Vinicius-Gabriel-P-Leitao'],
+				sameAs: ['https://github.com/vinicius-gpl'],
 				knowsAbout: [
 					'TypeScript',
 					'JavaScript',
@@ -106,7 +103,7 @@
 	<meta name="keywords" content={m['site.keywords']()} />
 	<meta name="author" content="Vinícius GPL" />
 	<meta name="robots" content="index, follow" />
-	<meta name="theme-color" content="#0a0a0a" />
+	<meta name="theme-color" content="#1e1e2e" />
 
 	<!-- Canonical & Multilingual Alternate Links -->
 	<link rel="canonical" href={page.url.href} />
@@ -142,32 +139,9 @@
 	<script type="application/ld+json" use:bindJsonLd={jsonLd}></script>
 </svelte:head>
 
-<!-- Slim Top Scroll Progress Indicator -->
-<div
-	class="pointer-events-none fixed top-0 left-0 z-50 h-0.5 bg-linear-to-r from-amber-500 via-white to-cyan-500 opacity-80 transition-all duration-500"
-	style="width: {scrollState.progress * 100}%"
-></div>
-
-<!-- Global Fixed Background: Threads em OGL -->
-<div aria-hidden="true" class="pointer-events-none fixed inset-0 z-0 opacity-75">
-	<Threads amplitude={1.5} distance={0} enableMouseInteraction={true} color={[1, 1, 1]} />
-</div>
-
-<div
-	aria-hidden="true"
-	class="pointer-events-none fixed inset-0 z-1"
-	style="background: radial-gradient(ellipse 70% 60% at 50% 50%, transparent 20%, #0a0a0a 85%);"
-></div>
-
-<div aria-hidden="true" class="pointer-events-none fixed inset-0 z-2">
-	<Noise patternAlpha={8} patternRefreshInterval={4} />
-</div>
-
 {#key locale}
-	<div class="relative z-10">
-		<Navbar />
-		{@render children()}
-	</div>
+	<Navbar />
+	{@render children()}
 
 	<Toast />
 {/key}
