@@ -16,30 +16,21 @@
 		"navigation": "Navegação"
 	},
 	"hero": {
+		"eyebrow": "Olá, meu nome é",
 		"role": "Desenvolvedor Full-Stack",
-		"role_backend": "Engenheiro Backend",
-		"role_ui": "Especialista em UI",
 		"subtitle": "Desenvolvimento de aplicações web, serviços backend e apps nativos.",
-		"cta_projects": "Ver projetos",
-		"scroll_hint": "DESLIZE PARA NAVEGAR NA TRILHA 3D"
+		"cta_projects": "Ver projetos"
 	},
 	"projects": {
-		"header_index": "// 01 . PROJETOS E ARQUITETURA",
 		"title": "Projetos",
 		"ideas_title": "Ideias Futuras",
-		"scroll_more": "Role para ver mais projetos",
 		"github": "GitHub",
 		"demo": "Demo",
-		"learn_more": "Detalhes",
+		"docs": "Docs",
+		"view_details": "Ver detalhes",
 		"close": "Fechar",
 		"highlights": "Destaques",
-		"gallery": "Galeria",
 		"project_prefix": "PROJETO",
-		"zoom": "Zoom",
-		"zoom_aria": "Ampliar imagem",
-		"prev_screenshot": "Imagem anterior",
-		"next_screenshot": "Próxima imagem",
-		"close_zoom": "Fechar ampliação",
 		"status": {
 			"done": "Concluído",
 			"pre_release": "Pré-release",
@@ -48,7 +39,6 @@
 		}
 	},
 	"about": {
-		"header_index": "// 02 . SOBRE E TECH STACK",
 		"title": "Sobre",
 		"bio": "Desenvolvedor full-stack criando apps modernos. Trabalho com TypeScript, React, Node.js e Tailwind no frontend, Java, Spring Boot no backend. Atualmente expandindo para Android utilizando Kotlin e nativo com Rust.",
 		"frontend": "Frontend",
@@ -57,7 +47,6 @@
 		"infra": "Infra"
 	},
 	"contact": {
-		"header_index": "// 03 . CONTATO",
 		"title": "Contato",
 		"subtitle": "Tem um projeto em mente, uma dúvida ou quer conversar? Envie uma mensagem!",
 		"status_available": "Disponível para projetos",
@@ -71,7 +60,6 @@
 		"sending": "Enviando...",
 		"copy_email": "Copiar Email",
 		"email_copied": "Copiado!",
-		"fast_response": "Resposta rápida (em até 24h)",
 		"shortcut_hint": "Pressione Ctrl + Enter para enviar",
 		"attachment": "Anexo (opcional)",
 		"attachment_placeholder": "Anexar arquivo (PDF, PNG, JPG, DOCX, ZIP - máx 5MB)",
@@ -79,13 +67,13 @@
 		"whatsapp_text": "Olá! Vi seu portfólio e gostaria de conversar.",
 		"invalid_email": "Por favor, insira um e-mail válido",
 		"file_read_error": "Erro ao ler arquivo",
-		"remove_attachment": "Remover anexo",
-		"open_form": "Enviar mensagem",
-		"mobile_drawer_hint": "Preencha o formulário para entrar em contato",
-		"close_drawer": "Fechar formulário"
+		"remove_attachment": "Remover anexo"
 	},
 	"toast": {
 		"success": "Email enviado com sucesso!",
 		"error": "Falha ao enviar. Tente novamente."
+	},
+	"resume": {
+		"download": "Baixar Currículo"
 	}
 }

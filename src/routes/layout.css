@@ -1,21 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..500&family=JetBrains+Mono:wght@400;500;700&display=swap');
 @import 'tailwindcss';
 
 @layer base {
+	:root {
+		/* Near-black neutral background scale — matches the site's dark UI,
+		   NOT Catppuccin's own base/mantle (no purple/blue cast). */
+		--ink-crust: #050506;
+		--ink-mantle: #0a0a0c;
+		--ink-base: #0f0f11;
+		--ink-surface0: #1a1a1d;
+		--ink-surface1: #2a2a2e;
+		--ink-surface2: #3a3a3f;
+
+		/* Near-white neutral text scale — deliberately gray, no tint. */
+		--fg-text: #f5f5f5;
+		--fg-subtext1: #d4d4d6;
+		--fg-subtext0: #a8a8ac;
+		--fg-overlay2: #8a8a8e;
+		--fg-overlay1: #6e6e72;
+		--fg-overlay0: #545458;
+
+		/* Catppuccin Mocha accents — used as-is, only for accent/status colors */
+		--ctp-mauve: #cba6f7;
+		--ctp-lavender: #b4befe;
+		--ctp-blue: #89b4fa;
+		--ctp-sapphire: #74c7ec;
+		--ctp-sky: #89dceb;
+		--ctp-teal: #94e2d5;
+		--ctp-green: #a6e3a1;
+		--ctp-yellow: #f9e2af;
+		--ctp-peach: #fab387;
+		--ctp-maroon: #eba0ac;
+		--ctp-red: #f38ba8;
+		--ctp-pink: #f5c2e7;
+
+		/* Semantic tokens */
+		--color-bg: var(--ink-base);
+		--color-bg-elevated: var(--ink-mantle);
+		--color-bg-header: rgba(10, 10, 12, 0.85);
+		--color-border: var(--ink-surface0);
+		--color-border-hover: var(--ink-surface1);
+		--color-text: var(--fg-text);
+		--color-text-muted: var(--fg-subtext0);
+		--color-text-faint: var(--fg-overlay1);
+		--color-accent: var(--ctp-mauve);
+		--color-accent-soft: rgba(203, 166, 247, 0.14);
+		--color-status-done: var(--ctp-green);
+		--color-status-pre-release: var(--ctp-yellow);
+		--color-status-in-progress: var(--ctp-blue);
+		--color-status-idea: var(--fg-overlay1);
+
+		--font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+	}
+
 	html,
 	body {
-		/* JS carousel controls movement — block native page scroll */
-		overflow: hidden;
 		height: 100%;
-		height: 100dvh;
 		width: 100%;
-		overscroll-behavior: none;
-		touch-action: pan-x pan-y;
+	}
+
+	html {
+		scroll-behavior: smooth;
+		scroll-padding-top: 4.5rem;
 	}
 
 	body {
-		background-color: #0a0a0a;
-		color: #f1f5f9;
+		background-color: var(--color-bg);
+		color: var(--color-text);
 		font-family:
 			'Inter',
 			system-ui,
@@ -26,48 +77,31 @@
 	}
 
 	:focus-visible {
-		outline: 2px solid rgba(255, 255, 255, 0.4);
+		outline: 2px solid var(--color-accent);
 		outline-offset: 2px;
 	}
 
-	/* Hide scrollbar (belt and suspenders) */
-	::-webkit-scrollbar {
-		width: 0;
-		height: 0;
-	}
-
 	::selection {
-		background: rgba(99, 102, 241, 0.3);
-		color: #fff;
+		background: rgba(203, 166, 247, 0.35);
+		color: var(--color-text);
 	}
 }
 
-/* Sections fill their panel height */
-section {
-	height: 100%;
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }
 
-/* Hero: always fully visible */
-#hero {
-	opacity: 1 !important;
-	transform: none !important;
-	animation: none !important;
-}
+/* Below 768px the navbar renders an Android-style fixed bottom bar (see
+   navbar.svelte / is-mobile hook) — reserve space so content and the
+   scroll-to-section anchors aren't hidden underneath it. */
+@media (max-width: 767px) {
+	body {
+		padding-bottom: calc(64px + env(safe-area-inset-bottom));
+	}
 
-/* Entrance animation: about / contact fade+slide up on mount */
-[data-visible='true'] {
-	animation: panel-in 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-[data-visible='false'],
-section:not([data-visible]):not(#hero):not(#projects) {
-	opacity: 0;
-	transform: translateY(18px);
-}
-
-@keyframes panel-in {
-	to {
-		opacity: 1;
-		transform: translateY(0);
+	html {
+		scroll-padding-bottom: calc(64px + env(safe-area-inset-bottom));
 	}
 }
