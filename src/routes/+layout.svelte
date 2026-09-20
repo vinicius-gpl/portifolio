@@ -32,6 +32,7 @@
 				jobTitle: locale === 'pt-br' ? 'Desenvolvedor Full-Stack' : 'Full-Stack Developer',
 				description: m['site.description'](),
 				url: 'https://vinicius-gpl.com',
+				image: 'https://vinicius-gpl.com/social/vinicius-gpl.com.png',
 				sameAs: ['https://github.com/vinicius-gpl'],
 				knowsAbout: [
 					'TypeScript',
@@ -67,6 +68,7 @@
 				'@id': page.url.href,
 				url: page.url.href,
 				name: m['site.title'](),
+				primaryImageOfPage: 'https://vinicius-gpl.com/social/vinicius-gpl.com.png',
 				isPartOf: {
 					'@id': 'https://vinicius-gpl.com/#website'
 				},
@@ -125,12 +127,21 @@
 	<meta property="og:url" content={page.url.href} />
 	<meta property="og:locale" content={locale === 'pt-br' ? 'pt_BR' : 'en_US'} />
 	<meta property="og:image" content="https://vinicius-gpl.com/social/vinicius-gpl.com.png" />
+	<meta
+		property="og:image:secure_url"
+		content="https://vinicius-gpl.com/social/vinicius-gpl.com.png"
+	/>
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content={m['site.og_title']()} />
 
 	<!-- Twitter Card Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={m['site.og_title']()} />
 	<meta name="twitter:description" content={m['site.og_description']()} />
 	<meta name="twitter:image" content="https://vinicius-gpl.com/social/vinicius-gpl.com.png" />
+	<meta name="twitter:image:alt" content={m['site.og_title']()} />
 
 	<!-- JSON-LD Structured Data for Google & AI Engines.
 	     Literal <script> element (not {@html}), content set via the
