@@ -1,17 +1,40 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test, vi } from 'vitest';
 import { render } from 'vitest-browser-svelte';
 import ProjectImage from './project-image.svelte';
 
 describe('ProjectImage', () => {
-	test('renders a trigger with the thumbnail and a hover preview image', async () => {
+	test('renders a clickable frame with the thumbnail and a zoom badge', async () => {
 		const { getByRole, container } = render(ProjectImage, {
 			props: { src: '/img/preview.png', alt: 'Preview' }
 		});
 
-		await expect.element(getByRole('button', { name: /expand|ampliada/i })).toBeInTheDocument();
+		await expect.element(getByRole('button', { name: /details|detalhes/i })).toBeInTheDocument();
+		expect(container.querySelector('img[alt="Preview"]')).not.toBeNull();
+		expect(container.querySelector('.zoom-badge')).not.toBeNull();
+	});
 
-		const images = container.querySelectorAll('img[alt="Preview"]');
-		expect(images.length).toBe(2);
+	test('happy path: calls onOpenDetails when clicked', async () => {
+		const onOpenDetails = vi.fn();
+		const { getByRole } = render(ProjectImage, {
+			props: { src: '/img/preview.png', alt: 'Preview', onOpenDetails }
+		});
+
+		await getByRole('button', { name: /details|detalhes/i }).click();
+
+		expect(onOpenDetails).toHaveBeenCalledOnce();
+	});
+
+	test('sad path: does not throw when clicked without an onOpenDetails handler', async () => {
+		const { getByRole } = render(ProjectImage, {
+			props: { src: '/img/preview.png', alt: 'Preview' }
+		});
+
+		const button = getByRole('button', { name: /details|detalhes/i });
+		await button.click();
+
+		// Still standing after the click — an unhandled error would have failed
+		// the test on its own, this just confirms the component survived.
+		await expect.element(button).toBeInTheDocument();
 	});
 
 	test('renders the desktop image inside an aspect-ratio frame', async () => {

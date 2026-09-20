@@ -27,8 +27,9 @@
 		"github": "GitHub",
 		"demo": "Demo",
 		"docs": "Docs",
-		"expand_image": "Ver imagem ampliada",
-		"close_image": "Fechar imagem",
+		"view_details": "Ver detalhes",
+		"close": "Fechar",
+		"highlights": "Destaques",
 		"project_prefix": "PROJETO",
 		"status": {
 			"done": "Concluído",
@@ -71,5 +72,8 @@
 	"toast": {
 		"success": "Email enviado com sucesso!",
 		"error": "Falha ao enviar. Tente novamente."
+	},
+	"resume": {
+		"download": "Baixar Currículo"
 	}
 }

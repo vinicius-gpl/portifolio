@@ -3,10 +3,14 @@
 	import { PROJECTS } from '$lib/data/projects';
 	import ProjectImage from '../project-image.svelte';
 	import ProjectLinks from '../project-links.svelte';
+	import ProjectDetailSheet from '../project-detail-sheet.svelte';
+	import { Search } from 'lucide-svelte';
 	import * as m from '$lib/paraglide/messages';
 
 	const project = PROJECTS.find((p) => p.id === 'acerola-desktop')!;
 	const desc = $derived(getLocale() === 'pt-br' ? project.desc['pt-br'] : project.desc.en);
+
+	let detailsOpen = $state(false);
 </script>
 
 <article class="grid grid-cols-1 items-center gap-8 md:grid-cols-[1.7fr_1fr]">
@@ -18,6 +22,7 @@
 			alt={project.title}
 			type={project.previewType}
 			dimensions={project.previewDimensions}
+			onOpenDetails={() => (detailsOpen = true)}
 		/>
 	</div>
 	<div>
@@ -35,6 +40,18 @@
 				<li>{tech}</li>
 			{/each}
 		</ul>
-		<ProjectLinks {project} />
+		<div class="flex flex-wrap items-center gap-x-[1.1rem] gap-y-2">
+			<ProjectLinks {project} />
+			<button
+				type="button"
+				class="view-details-btn inline-flex items-center gap-[6px] text-[0.78rem] font-semibold text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-accent)]"
+				onclick={() => (detailsOpen = true)}
+			>
+				<Search size={14} />
+				{m['projects.view_details']()}
+			</button>
+		</div>
 	</div>
 </article>
+
+<ProjectDetailSheet {project} bind:open={detailsOpen} />

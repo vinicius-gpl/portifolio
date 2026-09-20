@@ -1,17 +1,18 @@
 <script lang="ts">
-	import { Mail, Copy, Check, ArrowUpRight } from 'lucide-svelte';
+	import { Mail, Copy, Check, ArrowUpRight, Download } from 'lucide-svelte';
 	import GithubIcon from '$lib/components/primitives/github-icon.svelte';
 	import WhatsappIcon from '$lib/components/primitives/whatsapp-icon.svelte';
 	import { toast } from '$lib/store/toast.svelte';
 	import ContactForm from '$lib/components/composites/contact-form.svelte';
 	import { intersect } from '$lib/actions/intersect';
 	import { scrollReveal } from '$lib/actions/scroll-reveal';
+	import { RESUME_URL } from '$lib/data/resume';
 	import * as m from '$lib/paraglide/messages';
 
 	let copied = $state(false);
 
 	async function copyEmail() {
-		const targetEmail = 'contato@vinicius-gpl.com';
+		const targetEmail = 'contact@vinicius-gpl.com';
 		try {
 			await navigator.clipboard.writeText(targetEmail);
 			copied = true;
@@ -53,8 +54,8 @@
 						<Mail size={16} />
 						<div class="info-text">
 							<span class="info-label">{m['contact.email']()}</span>
-							<a href="mailto:contato@vinicius-gpl.com" class="info-value">
-								contato@vinicius-gpl.com
+							<a href="mailto:contact@vinicius-gpl.com" class="info-value">
+								contact@vinicius-gpl.com
 							</a>
 						</div>
 					</div>
@@ -100,6 +101,17 @@
 						<div class="info-text">
 							<span class="info-label">WhatsApp</span>
 							<span class="info-value">+55 62 99295-2214</span>
+						</div>
+					</div>
+					<ArrowUpRight size={14} class="arrow" />
+				</a>
+
+				<a href={RESUME_URL} target="_blank" rel="noopener noreferrer" class="info-card">
+					<div class="info-main">
+						<Download size={16} />
+						<div class="info-text">
+							<span class="info-label">{m['resume.download']()}</span>
+							<span class="info-value">PDF</span>
 						</div>
 					</div>
 					<ArrowUpRight size={14} class="arrow" />

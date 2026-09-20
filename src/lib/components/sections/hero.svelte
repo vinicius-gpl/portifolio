@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { ArrowDown } from 'lucide-svelte';
+	import { ArrowDown, Download } from 'lucide-svelte';
 	import GithubIcon from '$lib/components/primitives/github-icon.svelte';
+	import { RESUME_URL } from '$lib/data/resume';
 	import type { GitHubUser } from '$lib/service/github.service';
 	import * as m from '$lib/paraglide/messages';
 
@@ -37,6 +38,10 @@
 			>
 				<GithubIcon size={16} />
 				<span>GitHub</span>
+			</a>
+			<a href={RESUME_URL} target="_blank" rel="noopener noreferrer" class="btn-ghost">
+				<Download size={16} />
+				<span>{m['resume.download']()}</span>
 			</a>
 		</div>
 	</div>

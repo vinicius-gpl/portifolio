@@ -6,7 +6,13 @@ import { sveltekit } from '@sveltejs/kit/vite';
 
 export default defineConfig({
 	server: {
-		host: true
+		host: true,
+		watch: {
+			// paraglide/inlang's lix storage rewrites this file as a side effect
+			// of every compile — without this it retriggers the watcher, which
+			// recompiles, which rewrites it again, forever.
+			ignored: ['**/project.inlang/.lix/**', '**/project.inlang/cache/**']
+		}
 	},
 	ssr: {
 		noExternal: ['bits-ui']

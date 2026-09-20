@@ -27,8 +27,9 @@
 		"github": "GitHub",
 		"demo": "Demo",
 		"docs": "Docs",
-		"expand_image": "View larger image",
-		"close_image": "Close image",
+		"view_details": "View details",
+		"close": "Close",
+		"highlights": "Highlights",
 		"project_prefix": "PROJECT",
 		"status": {
 			"done": "Shipped",
@@ -71,5 +72,8 @@
 	"toast": {
 		"success": "Email sent successfully!",
 		"error": "Failed to send. Try again."
+	},
+	"resume": {
+		"download": "Download Resume"
 	}
 }
