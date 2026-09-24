@@ -56,6 +56,8 @@
 		display: block;
 		width: 100%;
 		height: auto;
+		transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+		will-change: transform;
 	}
 
 	.desktop-img {
@@ -63,6 +65,13 @@
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
+		transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+		will-change: transform;
+	}
+
+	.image-frame:hover .mobile-img,
+	.image-frame:hover .desktop-img {
+		transform: scale(1.035);
 	}
 
 	.zoom-badge {
@@ -75,14 +84,18 @@
 		width: 32px;
 		height: 32px;
 		border-radius: 999px;
-		background: rgba(0, 0, 0, 0.55);
+		background: rgba(0, 0, 0, 0.65);
 		color: #fff;
 		opacity: 0;
-		transition: opacity 0.15s;
+		transform: scale(0.9);
+		transition:
+			opacity 0.2s ease,
+			transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 	}
 
 	.image-frame:hover .zoom-badge,
 	.image-frame:focus-visible .zoom-badge {
 		opacity: 1;
+		transform: scale(1);
 	}
 </style>

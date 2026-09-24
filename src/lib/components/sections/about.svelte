@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { intersect } from '$lib/actions/intersect';
 	import { scrollReveal } from '$lib/actions/scroll-reveal';
+	import { scrollScale } from '$lib/actions/scroll-scale';
 	import * as m from '$lib/paraglide/messages';
 
 	const STACK = [
@@ -31,7 +32,15 @@
 
 	<p class="bio-text">{m['about.bio']()}</p>
 
-	<div class="stack-grid">
+	<div
+		class="stack-grid"
+		use:scrollScale={{
+			mode: 'stagger-grid',
+			childrenSelector: '.stack-item',
+			stagger: 0.035,
+			startScale: 0.7
+		}}
+	>
 		{#each STACK as group (group.category())}
 			<div class="stack-group">
 				<span class="stack-category">{group.category()}</span>

@@ -105,3 +105,35 @@
 		scroll-padding-bottom: calc(64px + env(safe-area-inset-bottom));
 	}
 }
+
+/* GSAP 3D Tilt & Spotlight Cards */
+.card-3d {
+	transform-style: preserve-3d;
+	perspective: 1000px;
+	will-change: transform;
+}
+
+.spotlight-card {
+	position: relative;
+	overflow: hidden;
+}
+
+.spotlight-card::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	border-radius: inherit;
+	background: radial-gradient(
+		500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+		rgba(203, 166, 247, 0.12),
+		transparent 45%
+	);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	z-index: 2;
+}
+
+.spotlight-card:hover::before {
+	opacity: 1;
+}
