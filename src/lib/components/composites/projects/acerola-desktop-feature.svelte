@@ -6,6 +6,8 @@
 	import ProjectDetailSheet from '../project-detail-sheet.svelte';
 	import { Search } from 'lucide-svelte';
 	import * as m from '$lib/paraglide/messages';
+	import { scrollScale } from '$lib/actions/scroll-scale';
+	import { card3D } from '$lib/actions/card-3d';
 
 	const project = PROJECTS.find((p) => p.id === 'acerola-desktop')!;
 	const desc = $derived(getLocale() === 'pt-br' ? project.desc['pt-br'] : project.desc.en);
@@ -13,9 +15,13 @@
 	let detailsOpen = $state(false);
 </script>
 
-<article class="grid grid-cols-1 items-center gap-8 md:grid-cols-[1.7fr_1fr]">
+<article
+	class="grid grid-cols-1 items-center gap-8 md:grid-cols-[1.7fr_1fr]"
+	use:scrollScale={{ mode: 'scrub', startScale: 0.9, exitScale: 0.96 }}
+>
 	<div
-		class="overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-[var(--color-bg-elevated)]"
+		class="overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] transition-shadow duration-300 hover:shadow-xl hover:shadow-[rgba(203,166,247,0.06)]"
+		use:card3D={{ maxRotation: 5, hoverScale: 1.015 }}
 	>
 		<ProjectImage
 			src={project.preview ?? ''}

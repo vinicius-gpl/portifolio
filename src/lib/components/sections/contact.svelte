@@ -6,6 +6,8 @@
 	import ContactForm from '$lib/components/composites/contact-form.svelte';
 	import { intersect } from '$lib/actions/intersect';
 	import { scrollReveal } from '$lib/actions/scroll-reveal';
+	import { scrollScale } from '$lib/actions/scroll-scale';
+	import { card3D } from '$lib/actions/card-3d';
 	import { RESUME_URL } from '$lib/data/resume';
 	import * as m from '$lib/paraglide/messages';
 
@@ -48,8 +50,16 @@
 
 			<p class="subtitle">{m['contact.subtitle']()}</p>
 
-			<div class="info-cards">
-				<div class="info-card">
+			<div
+				class="info-cards"
+				use:scrollScale={{
+					mode: 'stagger-grid',
+					childrenSelector: '.info-card',
+					stagger: 0.08,
+					startScale: 0.88
+				}}
+			>
+				<div class="info-card" use:card3D={{ maxRotation: 5, hoverScale: 1.015 }}>
 					<div class="info-main">
 						<Mail size={16} />
 						<div class="info-text">
@@ -79,6 +89,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					class="info-card"
+					use:card3D={{ maxRotation: 5, hoverScale: 1.015 }}
 				>
 					<div class="info-main">
 						<GithubIcon size={16} />
@@ -95,6 +106,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					class="info-card"
+					use:card3D={{ maxRotation: 5, hoverScale: 1.015 }}
 				>
 					<div class="info-main">
 						<WhatsappIcon size={16} />
@@ -106,7 +118,13 @@
 					<ArrowUpRight size={14} class="arrow" />
 				</a>
 
-				<a href={RESUME_URL} target="_blank" rel="noopener noreferrer" class="info-card">
+				<a
+					href={RESUME_URL}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="info-card"
+					use:card3D={{ maxRotation: 5, hoverScale: 1.015 }}
+				>
 					<div class="info-main">
 						<Download size={16} />
 						<div class="info-text">
@@ -119,7 +137,10 @@
 			</div>
 		</div>
 
-		<div class="contact-form-wrap">
+		<div
+			class="contact-form-wrap"
+			use:scrollScale={{ mode: 'scale-up', startScale: 0.92, duration: 0.65 }}
+		>
 			<ContactForm />
 		</div>
 	</div>

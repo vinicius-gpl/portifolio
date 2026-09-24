@@ -7,6 +7,7 @@
 	import AcerolaRagFeature from '../composites/projects/acerola-rag-feature.svelte';
 	import { intersect } from '$lib/actions/intersect';
 	import { scrollReveal } from '$lib/actions/scroll-reveal';
+	import { scrollScale } from '$lib/actions/scroll-scale';
 	import * as m from '$lib/paraglide/messages';
 
 	let { projects }: { projects: Project[] } = $props();
@@ -41,7 +42,15 @@
 		<h3 class="mt-[4.5rem] mb-6 text-center text-base font-bold text-[var(--color-text)]">
 			{m['projects.ideas_title']()}
 		</h3>
-		<div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-5">
+		<div
+			class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-5"
+			use:scrollScale={{
+				mode: 'stagger-grid',
+				childrenSelector: '.card',
+				stagger: 0.08,
+				startScale: 0.8
+			}}
+		>
 			{#each rest as project (project.id)}
 				<ProjectCard {project} />
 			{/each}

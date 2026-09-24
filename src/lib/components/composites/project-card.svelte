@@ -3,6 +3,7 @@
 	import ProjectLinks from './project-links.svelte';
 	import type { Project, ProjectStatus } from '$lib/data/projects';
 	import * as m from '$lib/paraglide/messages';
+	import { card3D } from '$lib/actions/card-3d';
 
 	let { project }: { project: Project } = $props();
 
@@ -29,7 +30,7 @@
 	});
 </script>
 
-<article class="card">
+<article class="card" use:card3D={{ maxRotation: 6, hoverScale: 1.025 }}>
 	<div class="card-top">
 		<h3 class="card-title">{project.title}</h3>
 		<span class="card-status" style="color: {STATUS_COLOR[project.status]}">{statusLabel()}</span>

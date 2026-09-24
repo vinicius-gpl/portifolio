@@ -10,6 +10,7 @@
 	} from '$lib/paraglide/runtime';
 	import Navbar from '$lib/components/sections/navbar.svelte';
 	import Toast from '$lib/components/composites/toast.svelte';
+	import ScrollProgress from '$lib/components/ui/scroll-progress.svelte';
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import * as m from '$lib/paraglide/messages';
@@ -149,6 +150,8 @@
 	     above for why. -->
 	<script type="application/ld+json" use:bindJsonLd={jsonLd}></script>
 </svelte:head>
+
+<ScrollProgress />
 
 {#key locale}
 	<Navbar />
