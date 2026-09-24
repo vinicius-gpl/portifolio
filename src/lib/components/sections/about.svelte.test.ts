@@ -23,4 +23,17 @@ describe('About', () => {
 		await expect.element(getByText('Tailwind', { exact: true }).first()).toBeInTheDocument();
 		await expect.element(getByText('Docker', { exact: true }).first()).toBeInTheDocument();
 	});
+
+	test('renders trajectory timeline milestones', async () => {
+		const { getByText } = render(About);
+
+		await expect.element(getByText('Azuos Assessoria Contábil', { exact: true }).first()).toBeInTheDocument();
+	});
+
+	test('renders Microsoft Store highlight card', async () => {
+		const { container } = render(About);
+
+		const storeLink = container.querySelector('a[href*="acerola-reader"]');
+		expect(storeLink).not.toBeNull();
+	});
 });
