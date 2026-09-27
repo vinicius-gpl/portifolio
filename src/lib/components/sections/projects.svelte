@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { Project } from '$lib/data/projects';
 	import ProjectCard from '../composites/project-card.svelte';
-	import AuthServerFeature from '../composites/projects/auth-server-feature.svelte';
 	import AcerolaAndroidFeature from '../composites/projects/acerola-android-feature.svelte';
 	import AcerolaDesktopFeature from '../composites/projects/acerola-desktop-feature.svelte';
+	import AuthServerFeature from '../composites/projects/auth-server-feature.svelte';
 	import AcerolaRagFeature from '../composites/projects/acerola-rag-feature.svelte';
 	import { intersect } from '$lib/actions/intersect';
 	import { scrollReveal } from '$lib/actions/scroll-reveal';
@@ -32,9 +32,9 @@
 	</h2>
 
 	<div class="flex flex-col gap-16">
-		<AuthServerFeature />
 		<AcerolaAndroidFeature />
 		<AcerolaDesktopFeature />
+		<AuthServerFeature />
 		<AcerolaRagFeature />
 	</div>
 

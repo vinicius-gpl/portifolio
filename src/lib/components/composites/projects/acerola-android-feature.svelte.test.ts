@@ -29,12 +29,11 @@ describe('AcerolaAndroidFeature', () => {
 		}
 	});
 
-	test('renders the screenshot at its natural size (mobile, no forced frame)', async () => {
+	test('sizes the image as a 16:9 desktop screenshot using its real dimensions', async () => {
 		const { container } = render(AcerolaAndroidFeature);
 
-		expect(project.previewType).toBe('mobile');
-		expect(container.querySelector('.mobile-img')).not.toBeNull();
-		expect(container.querySelector('.desktop-img')).toBeNull();
+		expect(container.querySelector('.desktop-img')).not.toBeNull();
+		expect(project.previewDimensions).toEqual({ width: 1920, height: 1080 });
 	});
 
 	test('the detail sheet starts closed', () => {

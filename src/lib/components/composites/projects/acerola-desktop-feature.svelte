@@ -16,11 +16,11 @@
 </script>
 
 <article
-	class="grid grid-cols-1 items-center gap-8 md:grid-cols-[1.7fr_1fr]"
+	class="grid grid-cols-1 items-center gap-8 md:grid-cols-[1fr_1.7fr]"
 	use:scrollScale={{ mode: 'scrub', startScale: 0.9, exitScale: 0.96 }}
 >
 	<div
-		class="overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] transition-shadow duration-300 hover:shadow-xl hover:shadow-[rgba(203,166,247,0.06)]"
+		class="overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] transition-shadow duration-300 hover:shadow-xl hover:shadow-[rgba(203,166,247,0.06)] md:order-2"
 		use:card3D={{ maxRotation: 5, hoverScale: 1.015 }}
 	>
 		<ProjectImage
@@ -31,7 +31,7 @@
 			onOpenDetails={() => (detailsOpen = true)}
 		/>
 	</div>
-	<div>
+	<div class="md:order-1">
 		<p
 			class="mb-2 [font-family:var(--font-mono)] text-[0.7rem] tracking-[0.1em] text-[var(--color-accent)] uppercase"
 		>
