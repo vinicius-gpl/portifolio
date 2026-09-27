@@ -29,68 +29,6 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
 	{
-		id: 'auth-server',
-		title: 'Auth Server',
-		status: 'done',
-		desc: {
-			en: 'Centralized identity management service with an admin panel and a JWT API. Supports refresh tokens via HttpOnly cookies, user lifecycle management, Swagger docs and Actuator metrics.',
-			'pt-br':
-				'Serviço centralizado de gestão de identidade com painel administrativo e API JWT. Suporta refresh tokens via cookies HttpOnly, ciclo de vida de usuários, Swagger e métricas via Actuator.'
-		},
-		tech: ['Java', 'Spring Boot', 'Spring Security', 'React', 'TypeScript', 'JWT'],
-		github: 'https://github.com/vinicius-gpl/acerola-auth',
-		preview: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-panel.png',
-		previewDimensions: { width: 1517, height: 1284 },
-		images: [
-			{
-				title: { en: 'Login', 'pt-br': 'Login' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-login.png'
-			},
-			{
-				title: { en: 'Metadata', 'pt-br': 'Metadados' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-metadata.png'
-			},
-			{
-				title: { en: 'Admin Panel', 'pt-br': 'Painel Administrativo' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-panel.png'
-			}
-		],
-		highlights: [
-			{
-				title: { en: 'Token Architecture', 'pt-br': 'Arquitetura de Tokens' },
-				body: {
-					en: 'Short-lived access JWT paired with a refresh token in an HttpOnly cookie — inaccessible to JavaScript and resistant to XSS attacks.',
-					'pt-br':
-						'Access JWT de curta duração combinado com refresh token em cookie HttpOnly — invisível para JavaScript e resistente a ataques XSS.'
-				}
-			},
-			{
-				title: { en: 'Admin Panel', 'pt-br': 'Painel Administrativo' },
-				body: {
-					en: 'React frontend for full user lifecycle management: create, activate, suspend and reset passwords, filtered by role.',
-					'pt-br':
-						'Frontend React para gerenciar o ciclo de vida completo de usuários: criar, ativar, suspender e redefinir senhas, filtrado por cargo.'
-				}
-			},
-			{
-				title: { en: 'External Integration', 'pt-br': 'Integração Externa' },
-				body: {
-					en: 'Any service validates tokens by calling a single endpoint — no shared database, no tight coupling between apps.',
-					'pt-br':
-						'Qualquer serviço valida tokens chamando um único endpoint — sem banco compartilhado, sem acoplamento entre aplicações.'
-				}
-			},
-			{
-				title: { en: 'Observability', 'pt-br': 'Observabilidade' },
-				body: {
-					en: 'Swagger UI for the full API surface, plus Actuator endpoints for live health checks and system metrics.',
-					'pt-br':
-						'Swagger UI com toda a superfície da API, mais endpoints do Actuator para health checks e métricas em tempo real.'
-				}
-			}
-		]
-	},
-	{
 		id: 'acerola-android',
 		title: 'Acerola Android',
 		status: 'pre-release',
@@ -103,8 +41,8 @@ export const PROJECTS: Project[] = [
 		github: 'https://github.com/vinicius-gpl/acerola-reader/tree/main/acerola/android',
 		docs: 'https://docs.acerola.app/',
 		preview:
-			'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/prints/home-screen.png',
-		previewType: 'mobile',
+			'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/banner/acerola-android-solo.png',
+		previewDimensions: { width: 1920, height: 1080 },
 		images: [
 			{
 				title: { en: 'Home', 'pt-br': 'Início' },
@@ -249,54 +187,63 @@ export const PROJECTS: Project[] = [
 		]
 	},
 	{
-		id: 'acerola-translater',
-		title: 'Acerola Translator',
-		status: 'idea',
+		id: 'auth-server',
+		title: 'Auth Server',
+		status: 'done',
 		desc: {
-			en: 'Automatic manga and webtoon translation service. Detects speech balloons, runs OCR, translates via AI (Claude / Ollama / OpenAI), applies inpainting and re-renders the page in Brazilian Portuguese.',
+			en: 'Centralized identity management service with an admin panel and a JWT API. Supports refresh tokens via HttpOnly cookies, user lifecycle management, Swagger docs and Actuator metrics.',
 			'pt-br':
-				'Serviço de tradução automática de mangás e webtoons. Detecta balões, executa OCR, traduz via IA (Claude / Ollama / OpenAI), aplica inpainting e redesenha a página em português brasileiro.'
+				'Serviço centralizado de gestão de identidade com painel administrativo e API JWT. Suporta refresh tokens via cookies HttpOnly, ciclo de vida de usuários, Swagger e métricas via Actuator.'
 		},
-		tech: ['Go', 'Python', 'FastAPI', 'OpenCV', 'manga-ocr', 'Svelte 5', 'Docker'],
+		tech: ['Java', 'Spring Boot', 'Spring Security', 'React', 'TypeScript', 'JWT'],
+		github: 'https://github.com/vinicius-gpl/acerola-auth',
+		preview: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-panel.png',
+		previewDimensions: { width: 1517, height: 1284 },
+		images: [
+			{
+				title: { en: 'Login', 'pt-br': 'Login' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-login.png'
+			},
+			{
+				title: { en: 'Metadata', 'pt-br': 'Metadados' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-metadata.png'
+			},
+			{
+				title: { en: 'Admin Panel', 'pt-br': 'Painel Administrativo' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-panel.png'
+			}
+		],
 		highlights: [
 			{
-				title: { en: 'Full Pipeline', 'pt-br': 'Pipeline Completo' },
+				title: { en: 'Token Architecture', 'pt-br': 'Arquitetura de Tokens' },
 				body: {
-					en: 'Balloon detection → OCR → AI translation → inpainting → re-render, end to end in one job per page.',
+					en: 'Short-lived access JWT paired with a refresh token in an HttpOnly cookie — inaccessible to JavaScript and resistant to XSS attacks.',
 					'pt-br':
-						'Detecção de balões → OCR → tradução com IA → inpainting → redesenho, fim a fim em um único job por página.'
+						'Access JWT de curta duração combinado com refresh token em cookie HttpOnly — invisível para JavaScript e resistente a ataques XSS.'
 				}
 			},
 			{
-				title: { en: 'Parallel Processing', 'pt-br': 'Processamento Paralelo' },
+				title: { en: 'Admin Panel', 'pt-br': 'Painel Administrativo' },
 				body: {
-					en: 'Multiple pages processed simultaneously; live progress streamed to the browser via Server-Sent Events.',
+					en: 'React frontend for full user lifecycle management: create, activate, suspend and reset passwords, filtered by role.',
 					'pt-br':
-						'Múltiplas páginas processadas simultaneamente; progresso transmitido em tempo real ao navegador via Server-Sent Events.'
+						'Frontend React para gerenciar o ciclo de vida completo de usuários: criar, ativar, suspender e redefinir senhas, filtrado por cargo.'
 				}
 			},
 			{
-				title: { en: 'Multi-provider AI', 'pt-br': 'IA Multi-provedor' },
+				title: { en: 'External Integration', 'pt-br': 'Integração Externa' },
 				body: {
-					en: 'Claude, OpenAI and Ollama (local model) behind a single interface — swap provider without touching the pipeline code.',
+					en: 'Any service validates tokens by calling a single endpoint — no shared database, no tight coupling between apps.',
 					'pt-br':
-						'Claude, OpenAI e Ollama (modelo local) atrás de uma interface única — troca de provedor sem mexer no código do pipeline.'
+						'Qualquer serviço valida tokens chamando um único endpoint — sem banco compartilhado, sem acoplamento entre aplicações.'
 				}
 			},
 			{
-				title: { en: 'Hybrid Architecture', 'pt-br': 'Arquitetura Híbrida' },
+				title: { en: 'Observability', 'pt-br': 'Observabilidade' },
 				body: {
-					en: 'Go manages HTTP, jobs and SSE. Python runs manga-ocr loaded once in memory — no cold start cost per page.',
+					en: 'Swagger UI for the full API surface, plus Actuator endpoints for live health checks and system metrics.',
 					'pt-br':
-						'Go gerencia HTTP, jobs e SSE. Python roda manga-ocr carregado uma vez na memória — sem custo de inicialização por página.'
-				}
-			},
-			{
-				title: { en: 'One-command Deploy', 'pt-br': 'Deploy com um Comando' },
-				body: {
-					en: 'Docker Compose bundles Go and Python into a single self-hosted stack — up and running with `docker compose up`.',
-					'pt-br':
-						'Docker Compose empacota Go e Python em uma stack self-hosted — no ar com `docker compose up`.'
+						'Swagger UI com toda a superfície da API, mais endpoints do Actuator para health checks e métricas em tempo real.'
 				}
 			}
 		]
@@ -376,6 +323,59 @@ export const PROJECTS: Project[] = [
 					en: 'EasyOCR and Unstructured extract text from scanned PDFs, images and mixed-format documents automatically.',
 					'pt-br':
 						'EasyOCR e Unstructured extraem texto de PDFs escaneados, imagens e documentos com formatos mistos automaticamente.'
+				}
+			}
+		]
+	},
+	{
+		id: 'acerola-translater',
+		title: 'Acerola Translator',
+		status: 'idea',
+		desc: {
+			en: 'Automatic manga and webtoon translation service. Detects speech balloons, runs OCR, translates via AI (Claude / Ollama / OpenAI), applies inpainting and re-renders the page in Brazilian Portuguese.',
+			'pt-br':
+				'Serviço de tradução automática de mangás e webtoons. Detecta balões, executa OCR, traduz via IA (Claude / Ollama / OpenAI), aplica inpainting e redesenha a página em português brasileiro.'
+		},
+		tech: ['Go', 'Python', 'FastAPI', 'OpenCV', 'manga-ocr', 'Svelte 5', 'Docker'],
+		highlights: [
+			{
+				title: { en: 'Full Pipeline', 'pt-br': 'Pipeline Completo' },
+				body: {
+					en: 'Balloon detection → OCR → AI translation → inpainting → re-render, end to end in one job per page.',
+					'pt-br':
+						'Detecção de balões → OCR → tradução com IA → inpainting → redesenho, fim a fim em um único job por página.'
+				}
+			},
+			{
+				title: { en: 'Parallel Processing', 'pt-br': 'Processamento Paralelo' },
+				body: {
+					en: 'Multiple pages processed simultaneously; live progress streamed to the browser via Server-Sent Events.',
+					'pt-br':
+						'Múltiplas páginas processadas simultaneamente; progresso transmitido em tempo real ao navegador via Server-Sent Events.'
+				}
+			},
+			{
+				title: { en: 'Multi-provider AI', 'pt-br': 'IA Multi-provedor' },
+				body: {
+					en: 'Claude, OpenAI and Ollama (local model) behind a single interface — swap provider without touching the pipeline code.',
+					'pt-br':
+						'Claude, OpenAI e Ollama (modelo local) atrás de uma interface única — troca de provedor sem mexer no código do pipeline.'
+				}
+			},
+			{
+				title: { en: 'Hybrid Architecture', 'pt-br': 'Arquitetura Híbrida' },
+				body: {
+					en: 'Go manages HTTP, jobs and SSE. Python runs manga-ocr loaded once in memory — no cold start cost per page.',
+					'pt-br':
+						'Go gerencia HTTP, jobs e SSE. Python roda manga-ocr carregado uma vez na memória — sem custo de inicialização por página.'
+				}
+			},
+			{
+				title: { en: 'One-command Deploy', 'pt-br': 'Deploy com um Comando' },
+				body: {
+					en: 'Docker Compose bundles Go and Python into a single self-hosted stack — up and running with `docker compose up`.',
+					'pt-br':
+						'Docker Compose empacota Go e Python em uma stack self-hosted — no ar com `docker compose up`.'
 				}
 			}
 		]
