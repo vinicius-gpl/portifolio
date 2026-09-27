@@ -3,14 +3,7 @@
 	import { scrollReveal } from '$lib/actions/scroll-reveal';
 	import { scrollScale } from '$lib/actions/scroll-scale';
 	import { card3D } from '$lib/actions/card-3d';
-	import {
-		Briefcase,
-		GraduationCap,
-		MapPin,
-		Store,
-		ArrowUpRight,
-		Layers
-	} from 'lucide-svelte';
+	import { Briefcase, GraduationCap, MapPin, Store, ArrowUpRight, Layers } from 'lucide-svelte';
 	import { getLocale } from '$lib/paraglide/runtime';
 	import * as m from '$lib/paraglide/messages';
 
@@ -121,7 +114,9 @@
 		<div>
 			<div class="mb-6 flex items-center gap-2.5">
 				<Briefcase size={18} class="text-[var(--color-accent)]" />
-				<h3 class="text-sm font-bold tracking-wider text-[var(--color-text)] uppercase [font-family:var(--font-mono)]">
+				<h3
+					class="[font-family:var(--font-mono)] text-sm font-bold tracking-wider text-[var(--color-text)] uppercase"
+				>
 					{m['about.timeline_title']()}
 				</h3>
 			</div>
@@ -137,15 +132,15 @@
 			>
 				<!-- Continuous trajectory line -->
 				<div
-					class="absolute left-3 sm:left-3.5 top-4 bottom-5 w-[2px] -translate-x-1/2 bg-gradient-to-b from-[var(--color-accent)] via-[var(--color-border)] to-[var(--color-border)]"
+					class="absolute top-4 bottom-5 left-3 w-[2px] -translate-x-1/2 bg-gradient-to-b from-[var(--color-accent)] via-[var(--color-border)] to-[var(--color-border)] sm:left-3.5"
 					aria-hidden="true"
 				></div>
 
 				{#each TIMELINE as item (item.company)}
-					<div class="timeline-item relative mb-10 pl-8 sm:pl-10 last:mb-2">
+					<div class="timeline-item relative mb-10 pl-8 last:mb-2 sm:pl-10">
 						<!-- Node centered precisely on the trajectory line -->
 						<div
-							class="absolute left-3 sm:left-3.5 top-1 flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] transition-colors"
+							class="absolute top-1 left-3 flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] transition-colors sm:left-3.5"
 						>
 							{#if item.current}
 								<span class="relative flex h-3 w-3">
@@ -161,18 +156,18 @@
 
 						<!-- Timeline Content Card -->
 						<div
-							class="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-4 sm:p-5 transition-colors hover:border-[var(--color-border-hover)]"
+							class="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-4 transition-colors hover:border-[var(--color-border-hover)] sm:p-5"
 							use:card3D={{ maxRotation: 4, hoverScale: 1.01 }}
 						>
 							<div class="mb-2 flex flex-wrap items-center justify-between gap-2">
 								<span
-									class="rounded bg-[var(--color-accent-soft)] px-2 py-0.5 text-[0.68rem] font-semibold text-[var(--color-accent)] [font-family:var(--font-mono)]"
+									class="rounded bg-[var(--color-accent-soft)] px-2 py-0.5 [font-family:var(--font-mono)] text-[0.68rem] font-semibold text-[var(--color-accent)]"
 								>
 									{item.period}
 								</span>
 								{#if item.current}
 									<span
-										class="flex items-center gap-1.5 text-[0.65rem] font-bold tracking-wider text-emerald-400 uppercase [font-family:var(--font-mono)]"
+										class="flex items-center gap-1.5 [font-family:var(--font-mono)] text-[0.65rem] font-bold tracking-wider text-emerald-400 uppercase"
 									>
 										<span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
 										{m['about.experience_current']()}
@@ -183,7 +178,9 @@
 							<h4 class="text-[0.98rem] font-bold text-[var(--color-text)]">
 								{item.company}
 							</h4>
-							<p class="mb-3 text-[0.78rem] text-[var(--color-text-muted)] [font-family:var(--font-mono)]">
+							<p
+								class="mb-3 [font-family:var(--font-mono)] text-[0.78rem] text-[var(--color-text-muted)]"
+							>
 								{item.role}
 							</p>
 
@@ -212,12 +209,14 @@
 				<div class="mb-3 flex items-center justify-between">
 					<div class="flex items-center gap-2 text-[var(--color-accent)]">
 						<Store size={18} />
-						<span class="text-[0.7rem] font-bold tracking-wider uppercase [font-family:var(--font-mono)]">
+						<span
+							class="[font-family:var(--font-mono)] text-[0.7rem] font-bold tracking-wider uppercase"
+						>
 							{m['about.store_highlight_title']()}
 						</span>
 					</div>
 					<span
-						class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-[0.65rem] font-bold tracking-wider text-emerald-400 uppercase [font-family:var(--font-mono)]"
+						class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 [font-family:var(--font-mono)] text-[0.65rem] font-bold tracking-wider text-emerald-400 uppercase"
 					>
 						{m['about.store_highlight_badge']()}
 					</span>
@@ -230,7 +229,9 @@
 					{m['about.store_highlight_desc']()}
 				</p>
 
-				<div class="mb-4 flex flex-wrap gap-1.5 [font-family:var(--font-mono)] text-[0.68rem] text-[var(--color-text-faint)]">
+				<div
+					class="mb-4 flex flex-wrap gap-1.5 [font-family:var(--font-mono)] text-[0.68rem] text-[var(--color-text-faint)]"
+				>
 					<span class="rounded bg-[var(--ink-surface0)] px-2 py-0.5">Rust</span>
 					<span class="rounded bg-[var(--ink-surface0)] px-2 py-0.5">Tauri</span>
 					<span class="rounded bg-[var(--ink-surface0)] px-2 py-0.5">Svelte 5</span>
@@ -256,7 +257,9 @@
 			>
 				<div class="mb-3 flex items-center gap-2 text-[var(--color-accent)]">
 					<GraduationCap size={18} />
-					<span class="text-[0.7rem] font-bold tracking-wider uppercase [font-family:var(--font-mono)]">
+					<span
+						class="[font-family:var(--font-mono)] text-[0.7rem] font-bold tracking-wider uppercase"
+					>
 						{m['about.education_title']()}
 					</span>
 				</div>
@@ -264,11 +267,13 @@
 				<h4 class="text-[0.95rem] font-bold text-[var(--color-text)]">
 					{m['about.education_degree']()}
 				</h4>
-				<p class="text-[0.8rem] text-[var(--color-text-muted)] [font-family:var(--font-mono)]">
+				<p class="[font-family:var(--font-mono)] text-[0.8rem] text-[var(--color-text-muted)]">
 					{m['about.education_school']()}
 				</p>
 
-				<div class="mt-4 flex items-center gap-2 border-t border-[var(--color-border)] pt-3 text-[0.78rem] text-[var(--color-text-muted)]">
+				<div
+					class="mt-4 flex items-center gap-2 border-t border-[var(--color-border)] pt-3 text-[0.78rem] text-[var(--color-text-muted)]"
+				>
 					<MapPin size={14} class="shrink-0 text-[var(--color-accent)]" />
 					<span>{m['about.location']()}</span>
 				</div>
@@ -282,7 +287,9 @@
 			>
 				<div class="mb-4 flex items-center gap-2 text-[var(--color-accent)]">
 					<Layers size={18} />
-					<span class="text-[0.7rem] font-bold tracking-wider uppercase [font-family:var(--font-mono)]">
+					<span
+						class="[font-family:var(--font-mono)] text-[0.7rem] font-bold tracking-wider uppercase"
+					>
 						{m['about.stack_title']()}
 					</span>
 				</div>
@@ -290,7 +297,9 @@
 				<div class="space-y-3.5">
 					{#each STACK_GROUPS as group (group.category)}
 						<div>
-							<span class="mb-1.5 block text-[0.66rem] font-bold tracking-wider text-[var(--color-text-faint)] uppercase [font-family:var(--font-mono)]">
+							<span
+								class="mb-1.5 block [font-family:var(--font-mono)] text-[0.66rem] font-bold tracking-wider text-[var(--color-text-faint)] uppercase"
+							>
 								{group.category}
 							</span>
 							<div class="flex flex-wrap gap-1.5">
