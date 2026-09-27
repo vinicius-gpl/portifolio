@@ -103,20 +103,32 @@ export const PROJECTS: Project[] = [
 		github: 'https://github.com/vinicius-gpl/acerola-reader/tree/main/acerola/android',
 		docs: 'https://docs.acerola.app/',
 		preview:
-			'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/banner/01-home.png',
+			'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/prints/home-screen.png',
 		previewType: 'mobile',
 		images: [
 			{
 				title: { en: 'Home', 'pt-br': 'Início' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/banner/01-home.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/prints/home-screen.png'
 			},
 			{
 				title: { en: 'Reader', 'pt-br': 'Leitor' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/banner/02-reader.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/prints/reader-screen.png'
 			},
 			{
-				title: { en: 'Customization', 'pt-br': 'Personalização' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/banner/03-customization.png'
+				title: { en: 'Chapters', 'pt-br': 'Capítulos' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/prints/chapters-screen.png'
+			},
+			{
+				title: { en: 'History', 'pt-br': 'Histórico' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/prints/history-screen.png'
+			},
+			{
+				title: { en: 'Settings', 'pt-br': 'Configurações' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/prints/config-screen.png'
+			},
+			{
+				title: { en: 'Network', 'pt-br': 'Rede' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/android/prints/network-screen.png'
 			}
 		],
 		highlights: [
@@ -165,20 +177,32 @@ export const PROJECTS: Project[] = [
 		github: 'https://github.com/vinicius-gpl/acerola-reader/tree/main/acerola/desktop',
 		docs: 'https://docs.acerola.app/',
 		preview:
-			'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/banner/01-home.png',
+			'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/banner/acerola-desktop-solo.png',
 		previewDimensions: { width: 1920, height: 1080 },
 		images: [
 			{
 				title: { en: 'Home', 'pt-br': 'Início' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/banner/01-home.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/prints/home-screen.png'
 			},
 			{
 				title: { en: 'Reader', 'pt-br': 'Leitor' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/banner/02-reader.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/prints/reader-screen.png'
+			},
+			{
+				title: { en: 'Chapters', 'pt-br': 'Capítulos' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/prints/chapters-screen.png'
 			},
 			{
 				title: { en: 'History', 'pt-br': 'Histórico' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/banner/03-history.png'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/prints/history-screen.png'
+			},
+			{
+				title: { en: 'Settings', 'pt-br': 'Configurações' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/prints/config-screen.png'
+			},
+			{
+				title: { en: 'Network', 'pt-br': 'Rede' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/desktop/prints/network-screen.png'
 			}
 		],
 		highlights: [

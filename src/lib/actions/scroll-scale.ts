@@ -44,7 +44,7 @@ export const scrollScale: Action<HTMLElement, ScrollScaleOptions | undefined> = 
 
 	const mode = options?.mode ?? 'scrub';
 	let animation: gsap.core.Tween | gsap.core.Timeline | null = null;
-	let triggers: ScrollTrigger[] = [];
+	const triggers: ScrollTrigger[] = [];
 
 	if (mode === 'scrub') {
 		const startScale = options.startScale ?? 0.88;
