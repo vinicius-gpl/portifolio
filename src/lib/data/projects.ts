@@ -264,8 +264,36 @@ export const PROJECTS: Project[] = [
 		previewDimensions: { width: 1920, height: 1080 },
 		images: [
 			{
-				title: { en: 'Overview', 'pt-br': 'Visão geral' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/brag/brag.jpg'
+				title: { en: 'Infrastructure Dashboard', 'pt-br': 'Painel de Infraestrutura' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/infra-painel.jpg'
+			},
+			{
+				title: { en: 'Infrastructure Tickets', 'pt-br': 'Chamados de Infraestrutura' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/infra-chamados.jpg'
+			},
+			{
+				title: { en: 'Windows Agent', 'pt-br': 'Agente Windows' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/infra-agente-windows.jpg'
+			},
+			{
+				title: { en: 'Systems and Projects', 'pt-br': 'Sistemas e Projetos' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-projetos.jpg'
+			},
+			{
+				title: { en: 'Systems Tickets', 'pt-br': 'Chamados de Sistemas' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-chamados.jpg'
+			},
+			{
+				title: { en: 'Systems Kanban', 'pt-br': 'Kanban de Sistemas' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-kanban.jpg'
+			},
+			{
+				title: { en: 'Systems Timeline', 'pt-br': 'Cronograma de Sistemas' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-cronograma.jpg'
+			},
+			{
+				title: { en: 'Maintenance Inventory', 'pt-br': 'Inventário de Manutenção' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/manutencao-inventario.jpg'
 			}
 		],
 		highlights: [
