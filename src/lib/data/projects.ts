@@ -249,80 +249,56 @@ export const PROJECTS: Project[] = [
 		]
 	},
 	{
-		id: 'acerola-rag',
-		title: 'Acerola RAG',
+		id: 'acerola-ticket',
+		title: 'Acerola Ticket',
 		status: 'done',
 		desc: {
-			en: 'Retrieval-Augmented Generation system for chatting with your documents. Hybrid vector search, real-time streaming, multi-provider LLM support (OpenAI, Gemini, Claude, Ollama) and an admin panel for document management.',
+			en: 'IT management platform with support tickets, computer inventory, maintenance and a systems Kanban integrated with GitHub. Includes a Windows agent for monitoring and automatic updates.',
 			'pt-br':
-				'Sistema de Retrieval-Augmented Generation para conversar com seus documentos. Busca vetorial híbrida, streaming em tempo real, suporte a múltiplos LLMs (OpenAI, Gemini, Claude, Ollama) e painel administrativo para gerenciar documentos.'
+				'Plataforma de gestão de TI com chamados, inventário de computadores, manutenção e Kanban de sistemas integrado ao GitHub. Inclui agente Windows para monitoramento e atualizações automáticas.'
 		},
-		tech: [
-			'Python',
-			'FastAPI',
-			'LlamaIndex',
-			'Qdrant',
-			'SvelteKit',
-			'Svelte 5',
-			'Tailwind',
-			'Docker'
-		],
-		github: 'https://github.com/vinicius-gpl/acerola-rag',
-		preview: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-rag/main/docs/chat-print.png',
-		previewDimensions: { width: 1339, height: 601 },
+		tech: ['TypeScript', 'SvelteKit', 'NestJS', 'PostgreSQL', 'Drizzle', 'Go', 'Docker'],
+		github: 'https://github.com/vinicius-gpl/acerola-ticket',
+		preview:
+			'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/brag/brag.jpg',
+		previewDimensions: { width: 1920, height: 1080 },
 		images: [
 			{
-				title: { en: 'Chat', 'pt-br': 'Chat' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-rag/main/docs/chat-print.png'
-			},
-			{
-				title: { en: 'Admin Panel', 'pt-br': 'Painel Administrativo' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-rag/main/docs/admin-print.png'
-			},
-			{
-				title: { en: 'History', 'pt-br': 'Histórico' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-rag/main/docs/history-print.png'
+				title: { en: 'Overview', 'pt-br': 'Visão geral' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/brag/brag.jpg'
 			}
 		],
 		highlights: [
 			{
-				title: { en: 'Hybrid Search', 'pt-br': 'Busca Híbrida' },
+				title: { en: 'Support Tickets', 'pt-br': 'Gestão de Chamados' },
 				body: {
-					en: 'Combines dense vector search with BM25 in Qdrant — retrieves the top-6 most relevant chunks and reranks them contextually before feeding the LLM.',
+					en: 'Employees open and track tickets with screenshots and attachments, with access controlled by module.',
 					'pt-br':
-						'Combina busca vetorial densa com BM25 no Qdrant — recupera os 6 chunks mais relevantes e os reordena contextualmente antes de alimentar o LLM.'
+						'Colaboradores abrem e acompanham chamados com prints e anexos, com acesso controlado por módulo.'
 				}
 			},
 			{
-				title: { en: 'Multi-provider LLM', 'pt-br': 'LLM Multi-provedor' },
+				title: { en: 'Inventory and Maintenance', 'pt-br': 'Inventário e Manutenção' },
 				body: {
-					en: 'OpenAI, Gemini, Anthropic and Ollama behind a single interface — swap the provider without touching the pipeline.',
+					en: 'Tracks computers, parts, preventive maintenance and asset disposal, with a history for each machine.',
 					'pt-br':
-						'OpenAI, Gemini, Anthropic e Ollama atrás de uma interface única — troca de provedor sem mexer no pipeline.'
+						'Acompanha computadores, peças, manutenções preventivas e descarte, com histórico de cada máquina.'
 				}
 			},
 			{
-				title: { en: 'Parallel Ingestion', 'pt-br': 'Ingestão Paralela' },
+				title: { en: 'GitHub Integration', 'pt-br': 'Integração com GitHub' },
 				body: {
-					en: '4 workers process documents simultaneously. Chunks of 512 tokens with 64-token overlap using BAAI/bge-small-en-v1.5 embeddings (384 dimensions).',
+					en: 'Organizes software tickets in a Kanban and brings merged pull requests, closed issues and schedules into one timeline.',
 					'pt-br':
-						'4 workers processam documentos simultaneamente. Chunks de 512 tokens com overlap de 64 usando embeddings BAAI/bge-small-en-v1.5 (384 dimensões).'
+						'Organiza chamados de software em Kanban e reúne PRs mergeados, issues fechadas e agendamentos em um cronograma.'
 				}
 			},
 			{
-				title: { en: 'Real-time Streaming', 'pt-br': 'Streaming em Tempo Real' },
+				title: { en: 'Windows Agent', 'pt-br': 'Agente Windows' },
 				body: {
-					en: 'Answers stream progressively to the browser via SSE — no waiting for the full response before reading.',
+					en: 'A Go agent sends machine measurements to the API and updates automatically to the published LTS version.',
 					'pt-br':
-						'Respostas chegam progressivamente ao navegador via SSE — sem esperar a resposta completa para começar a ler.'
-				}
-			},
-			{
-				title: { en: 'Smart Parsing', 'pt-br': 'Parsing Inteligente' },
-				body: {
-					en: 'EasyOCR and Unstructured extract text from scanned PDFs, images and mixed-format documents automatically.',
-					'pt-br':
-						'EasyOCR e Unstructured extraem texto de PDFs escaneados, imagens e documentos com formatos mistos automaticamente.'
+						'Agente em Go envia medições das máquinas para a API e se atualiza automaticamente para a versão LTS publicada.'
 				}
 			}
 		]
