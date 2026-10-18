@@ -9,16 +9,14 @@
 	import { scrollScale } from '$lib/actions/scroll-scale';
 	import { card3D } from '$lib/actions/card-3d';
 
-	const project = PROJECTS.find((p) => p.id === 'acerola-rag')!;
+	const project = PROJECTS.find((p) => p.id === 'acerola-ticket')!;
 	const desc = $derived(getLocale() === 'pt-br' ? project.desc['pt-br'] : project.desc.en);
 
 	let detailsOpen = $state(false);
 </script>
 
-<!-- Chat screenshot is very wide (2.23:1) — give it a much wider column so it
-     reads at a comparable size to the other featured screenshots. -->
 <article
-	class="grid grid-cols-1 items-center gap-8 md:grid-cols-[1fr_2.7fr]"
+	class="grid grid-cols-1 items-center gap-8 md:grid-cols-[1fr_1.5fr]"
 	use:scrollScale={{ mode: 'scrub', startScale: 0.9, exitScale: 0.96 }}
 >
 	<div
