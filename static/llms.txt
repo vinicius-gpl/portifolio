@@ -1,53 +1,215 @@
 # Vinícius GPL — Full-Stack Developer & Software Engineer
 
-> Official summary file for LLMs, AI agents, and search engine assistants. Provides structured context about Vinícius GPL's portfolio, technical skills, open-source projects, and contact channels.
+> Official machine-readable context file for LLMs, AI agents, search engines, and automated assistants. Detailed specifications of Vinícius GPL's technical background, engineering projects, architecture decisions, and contact channels.
 
-## About Vinícius GPL
-Vinícius GPL is a Full-Stack Developer and Software Engineer creating high-performance web applications, resilient backend architectures, cross-platform desktop software, native Android apps, and AI systems.
+## Overview & Profile
 
-- **Primary Frontend**: TypeScript, SvelteKit, Svelte 5, React, TailwindCSS.
-- **Backend Architecture**: Java (Spring Boot, Spring Security), Rust, Go, Python (FastAPI, LlamaIndex).
-- **Mobile & Desktop**: Kotlin (Jetpack Compose), Rust + Tauri v2.
-- **Databases & Infra**: PostgreSQL, SQLite, Qdrant (Vector Search), Docker, iroh (P2P), Axum.
-- **GitHub Profile**: https://github.com/vinicius-gpl
+- **Full Name**: Vinícius Gabriel Pereira Leitão (commonly known as Vinícius GPL)
+- **Role**: Full-Stack Developer & Software Engineer
+- **Location**: Goiânia, Goiás, Brazil (UTC-3) • Open to remote worldwide, hybrid, and on-site opportunities
+- **Languages**: Portuguese (Native), English (Professional working proficiency)
+- **Current Position**: Backend Developer at Azuos Assessoria Contábil (Sep 2026 — Present)
+- **Primary Expertise**: Distributed backend architectures, resilient microservices, high-performance web applications, cross-platform desktop development (Rust + Tauri v2), native mobile development (Kotlin + Jetpack Compose), and peer-to-peer (P2P) local-first protocols.
+
+### Key Links
+- [Official Portfolio (Portuguese)](https://vinicius-gpl.com/): Official portfolio homepage in Brazilian Portuguese.
+- [Official Portfolio (English)](https://vinicius-gpl.com/en): Official portfolio homepage in English.
+- [GitHub Profile](https://github.com/vinicius-gpl): Open-source repositories, contributions, and active projects.
+- [Curriculum Vitae / Resume (PDF)](https://curriculum.vinicius-gpl.com/Vinicius%20Gabriel%20Pereira%20Leitao.pdf): Official downloadable resume.
+- [Sitemap](https://vinicius-gpl.com/sitemap.xml): XML sitemap for search engines and crawlers.
+
+---
+
+## Professional Trajectory & Experience
+
+### 1. Azuos Assessoria Contábil
+- **Role**: Backend Developer
+- **Period**: September 2026 — Present (Current)
+- **Key Responsibilities & Achievements**:
+  - Configuration, hardening, deployment, and ongoing maintenance of Linux VPS infrastructure hosting the company's core software services and internal applications.
+  - Development, maintenance, and monitoring of backend microservices using Node.js and NestJS, including relational database modeling and automated schema migrations.
+  - Integration of modern AI developer workflows (such as Claude Code) into the engineering routine for automated code reviews, refactoring, and dev velocity.
+
+### 2. Tribunal de Contas dos Municípios do Estado de Goiás (TCM-GO)
+- **Role**: Software Engineering Intern (Secretaria de Atos de Pessoal)
+- **Period**: August 2025 — September 2026
+- **Key Responsibilities & Achievements**:
+  - Maintenance and feature development for mission-critical audit and data analysis applications within the Personnel Acts Secretariat.
+  - Engineered automation pipelines and enterprise web software using Java, React, and Node.js for automating complex administrative procedures and analyzing municipal audit data.
+  - Applied software engineering best practices, agile methodologies, and AI tooling for developer acceleration.
+
+### 3. Acerola Reader Project
+- **Role**: Creator & Core Maintainer (Open-Source Project)
+- **Period**: 2026 — Present
+- **Key Responsibilities & Achievements**:
+  - Architected and shipped a cross-platform digital comic and manga reading ecosystem consisting of a Desktop client (Rust + Tauri v2 + Svelte 5) and a native Android client (Kotlin + Jetpack Compose).
+  - Designed and deployed signed production releases to the official Microsoft Store via SignPath Foundation certification.
+  - Implemented local-first peer-to-peer (P2P) sync using Rust and the iroh (QUIC) protocol with zero reliance on central servers.
+
+---
+
+## Education
+
+- **Estácio de Sá**
+  - **Degree**: Technologist in Systems Analysis and Development (Análise e Desenvolvimento de Sistemas)
+  - **Period**: 2024 — 2027 (In progress)
+  - **Core Studies**: Software Engineering, Object-Oriented Design, Data Structures & Algorithms, Database Management Systems, Distributed Systems, Cloud Computing.
+
+---
+
+## Technical Skills & Stack
+
+### Frontend & UI
+- **Languages**: TypeScript, JavaScript, HTML5, CSS3
+- **Frameworks & UI Libraries**: Svelte 5 (Runes), SvelteKit, React, Next.js
+- **Styling & CSS**: TailwindCSS, PostCSS, CSS Variables, Responsive Design
+- **Animations & Interactivity**: GSAP (GreenSock), ScrollTrigger, 3D Canvas / DOM Physics, Custom Svelte Actions
+- **Internationalization (i18n)**: Paraglide.js (inlang) supporting English (`en`) and Brazilian Portuguese (`pt-br`)
+
+### Backend & Architecture
+- **Languages**: Java, TypeScript / JavaScript, Rust, Go, Python
+- **Frameworks**: Spring Boot, Spring Security, NestJS, Axum, FastAPI
+- **Authentication & Security**: Dual-token JWT (short-lived access tokens paired with HttpOnly/SameSite refresh cookies), RBAC (Role-Based Access Control), Argon2 / BCrypt hashing, XSS/CSRF mitigation
+- **Protocols & Communication**: RESTful APIs, Server-Sent Events (SSE), WebSockets, HTTP/2, mDNS zero-configuration discovery
+
+### Mobile & Desktop
+- **Android**: Kotlin, Jetpack Compose, Android Architecture Components, Hilt (Dependency Injection), Coroutines & Flow, Rust FFI
+- **Desktop**: Rust, Tauri v2, Svelte 5, MSIX packaging, SignPath Foundation Windows binary signing, Microsoft Store publishing
+
+### Databases, Storage & Caching
+- **Relational Databases**: PostgreSQL, SQLite
+- **ORMs & Query Builders**: Drizzle ORM, Spring Data JPA / Hibernate
+- **Caching & In-Memory**: LRU byte-budget in-memory caching
+- **Vector Search**: Qdrant, BM25 hybrid retrieval
+
+### Networking & P2P
+- **Protocols**: iroh (QUIC-based local-first P2P with automatic NAT traversal and hole-punching), Axum embedded HTTP local servers, mDNS
+
+### Infrastructure, DevOps & Cloud
+- **Containers**: Docker, Docker Compose, multi-stage lightweight builds
+- **OS & Hosting**: Linux (Debian, Ubuntu), VPS administration, Cloudflare Workers, Cloudflare Pages, Wrangler CLI
+- **CI/CD & Version Control**: Git, GitHub Actions, semantic release automation
+- **AI & Computer Vision**: Claude Code, OpenAI API, Ollama (local LLM inference), manga-ocr, OpenCV
 
 ---
 
 ## Featured Projects
 
-### 1. Auth Server
-- **Description**: Centralized identity management service with an admin panel and JWT API. Supports refresh tokens via HttpOnly cookies, user lifecycle management, Swagger documentation, and Actuator metrics.
-- **Tech Stack**: Java, Spring Boot, Spring Security, React, TypeScript, JWT.
-- **GitHub**: https://github.com/vinicius-gpl/acerola-auth
+### 1. Acerola Android
+- **Status**: Pre-release
+- **Category**: Native Mobile App (Android)
+- **Description**: Native Android manga and comic reader built with Kotlin and Jetpack Compose. Scans local storage, parses CBZ/CBR archives, and automatically fetches rich metadata from MangaDex and AniList.
+- **Key Architectural Highlights**:
+  - *Storage Scanner*: Traverses and indexes designated external/internal storage directories to compile a comprehensive local library without manual rescanning.
+  - *Metadata Fetcher*: Enriches local titles with high-resolution covers, synopses, authors, genres, and chapter indexes by querying MangaDex API, AniList API, and parsing embedded ComicInfo.xml metadata.
+  - *Archive & Format Processing*: Native decompressor for CBZ (ZIP) and CBR (RAR) comic archives with zero-temp-file stream extraction; automated on-demand PDF conversion on first launch.
+  - *High-performance Reader Engine*: Flexible reading surface supporting horizontal paginated, vertical paginated, and seamless infinite webtoon scroll modes with automatic progress persistence down to the exact page.
+- **Tech Stack**: Kotlin, Jetpack Compose, Rust, Iroh, Hilt, MangaDex API, AniList API
+- **Links**:
+  - [Acerola Android GitHub](https://github.com/vinicius-gpl/acerola-reader/tree/main/acerola/android)
+  - [Acerola Monorepo GitHub](https://github.com/vinicius-gpl/acerola-reader)
+  - [Acerola Reader Documentation](https://docs.acerola.app/)
+  - [Preview Banner Image](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/banner/acerola-android-solo.png)
+  - [Screenshot - Home Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/home-screen.png)
+  - [Screenshot - Reader Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/reader-screen.png)
+  - [Screenshot - Chapters Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/chapters-screen.png)
+  - [Screenshot - History Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/history-screen.png)
+  - [Screenshot - Settings Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/config-screen.png)
+  - [Screenshot - Network Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/network-screen.png)
 
-### 2. Acerola RAG
-- **Description**: Retrieval-Augmented Generation system for chatting with documents. Combines hybrid vector search (Qdrant + BM25), real-time SSE streaming, multi-provider LLM support (OpenAI, Gemini, Claude, Ollama), parallel ingestion, and an admin panel.
-- **Tech Stack**: Python, FastAPI, LlamaIndex, Qdrant, SvelteKit, Svelte 5, Tailwind, Docker.
-- **GitHub**: https://github.com/vinicius-gpl/acerola-rag
+### 2. Acerola Desktop
+- **Status**: In Development / Officially Published on Microsoft Store
+- **Category**: Cross-Platform Desktop Application
+- **Description**: Modern comic and manga reader for desktop built with Rust and Tauri v2 with a responsive Svelte 5 frontend. Reads CBZ, CBR, and PDF files, organizes local collections, streams pages over local HTTP via Axum to companion mobile devices, and connects to AI translation plugins.
+- **Key Architectural Highlights**:
+  - *Native Rust Reader Engine*: High-speed extraction of CBZ, CBR, and PDF pages powered by Rust with an LRU byte-budget memory cache, ensuring instantaneous page flips without stutter or disk churn.
+  - *Embedded Mobile Server*: Spawns a lightweight local Axum HTTP server so the companion Android app can browse and stream the user's PC library over local Wi-Fi without transferring files.
+  - *AI Translation Plugin Integration*: Seamless integration with Acerola Translator; uploads CBZ archives and tracks real-time progress via Server-Sent Events (SSE), downloading the translated comic automatically once rendered.
+  - *Zero-Config mDNS Discovery*: Automatically detects instances of Acerola Android and Acerola Translator across the local network without IP configuration.
+  - *Code Signing & Microsoft Store*: Windows binaries signed via SignPath Foundation for open-source GPL3 compliance and officially published on the Microsoft Store.
+- **Tech Stack**: Rust, Tauri v2, Svelte 5, TypeScript, Iroh, Tailwind, Axum
+- **Links**:
+  - [Acerola Desktop GitHub](https://github.com/vinicius-gpl/acerola-reader/tree/main/acerola/desktop)
+  - [Acerola Monorepo GitHub](https://github.com/vinicius-gpl/acerola-reader)
+  - [Acerola Reader Documentation](https://docs.acerola.app/)
+  - [Preview Banner Image](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/banner/acerola-desktop-solo.png)
+  - [Screenshot - Home Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/home-screen.png)
+  - [Screenshot - Reader Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/reader-screen.png)
+  - [Screenshot - Chapters Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/chapters-screen.png)
+  - [Screenshot - History Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/history-screen.png)
+  - [Screenshot - Settings Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/config-screen.png)
+  - [Screenshot - Network Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/network-screen.png)
 
-### 3. Acerola Android
-- **Description**: Native Android manga reader built with Kotlin and Jetpack Compose. Scans local storage, parses CBZ/CBR archives, and auto-fetches metadata from MangaDex and AniList.
-- **Tech Stack**: Kotlin, Jetpack Compose, Rust, Iroh, Hilt, MangaDex API, AniList API.
-- **GitHub**: https://github.com/vinicius-gpl/acerola-reader/tree/main/acerola/android
-- **Docs**: https://docs.acerola-comic.com/
+### 3. Auth Server
+- **Status**: Shipped / Production Ready
+- **Category**: Enterprise Identity & Access Management (IAM)
+- **Description**: Centralized authentication and identity management service with an administrative dashboard and a secure JWT API. Designed to decouple authentication logic from downstream microservices.
+- **Key Architectural Highlights**:
+  - *Dual-Token Architecture*: Issues short-lived access JWTs paired with long-lived refresh tokens securely stored in HttpOnly, SameSite cookies — preventing token theft through Cross-Site Scripting (XSS).
+  - *Administrative Panel*: React + TypeScript interface for full user lifecycle management: user onboarding, account activation, suspension, password resets, and role assignments.
+  - *Decoupled External Integration*: Downstream services authenticate incoming requests via a single verification endpoint without requiring direct database connections or coupling.
+  - *Production Observability*: Full interactive Swagger UI API surface documentation and Spring Boot Actuator endpoints for real-time health checks, JVM memory, and throughput metrics.
+- **Tech Stack**: Java, Spring Boot, Spring Security, React, TypeScript, JWT
+- **Links**:
+  - [Auth Server GitHub](https://github.com/vinicius-gpl/acerola-auth)
+  - [Preview Screenshot](https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-panel.png)
+  - [Screenshot - Login](https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-login.png)
+  - [Screenshot - Metadata](https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-metadata.png)
+  - [Screenshot - Admin Panel](https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-panel.png)
 
-### 4. Acerola Desktop
-- **Description**: Cross-platform desktop comic reader built with Rust and Tauri v2. Reads CBZ/CBR/PDF files, manages local library, streams pages over HTTP via Axum to mobile devices, and connects to AI translator plugins.
-- **Tech Stack**: Rust, Tauri v2, Svelte 5, TypeScript, Iroh, Tailwind.
-- **GitHub**: https://github.com/vinicius-gpl/acerola-reader/tree/main/acerola/desktop
-- **Docs**: https://docs.acerola-comic.com/
+### 4. Acerola Ticket
+- **Status**: Shipped / Done
+- **Category**: IT Service Desk & Systems Management Platform
+- **Description**: Comprehensive IT asset management and service desk platform featuring support tickets, hardware inventory, preventive maintenance tracking, and a systems Kanban integrated with GitHub. Includes an automated Go Windows monitoring agent.
+- **Key Architectural Highlights**:
+  - *Support Ticket System*: Employees submit and track support tickets with attachments and screenshots; ticket access, prioritization, and assignment are governed by granular module permissions.
+  - *Hardware Inventory & Maintenance*: Tracks corporate computers, replacement parts, scheduled preventive maintenance cycles, and machine disposal histories with per-device audit trails.
+  - *GitHub Integration & Systems Kanban*: Synchronizes merged pull requests, closed GitHub issues, and release milestones into an interactive Kanban board and chronological delivery schedule.
+  - *Go Windows Background Agent*: Standalone Go service installed on workstation machines that captures hardware metrics and automatically updates itself to published LTS versions.
+- **Tech Stack**: TypeScript, SvelteKit, NestJS, PostgreSQL, Drizzle ORM, Go, Docker
+- **Links**:
+  - [Acerola Ticket GitHub](https://github.com/vinicius-gpl/acerola-ticket)
+  - [Preview Banner Image](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/brag/brag.jpg)
+  - [Screenshot - Infrastructure Dashboard](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/infra-painel.jpg)
+  - [Screenshot - Infrastructure Tickets](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/infra-chamados.jpg)
+  - [Screenshot - Windows Agent](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/infra-agente-windows.jpg)
+  - [Screenshot - Systems and Projects](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-projetos.jpg)
+  - [Screenshot - Systems Tickets](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-chamados.jpg)
+  - [Screenshot - Systems Kanban](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-kanban.jpg)
+  - [Screenshot - Systems Timeline](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-cronograma.jpg)
+  - [Screenshot - Maintenance Inventory](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/manutencao-inventario.jpg)
 
 ### 5. Acerola Translator
-- **Description**: Automatic manga and webtoon translation service. Detects speech balloons, runs OCR (manga-ocr), translates via AI (Claude / Ollama / OpenAI), applies inpainting, and re-renders translated pages.
-- **Tech Stack**: Go, Python, FastAPI, OpenCV, manga-ocr, Svelte 5, Docker.
-- **GitHub**: https://github.com/vinicius-gpl/acerola-translater
+- **Status**: Future Idea / Architecture Defined
+- **Category**: Computer Vision & AI Translation Service
+- **Description**: Automated manga and webtoon translation pipeline that detects speech balloons, runs Japanese OCR, translates dialogue using modern LLMs, cleans the original text with inpainting, and typesets translated Portuguese text.
+- **Key Architectural Highlights**:
+  - *End-to-End Vision Pipeline*: Multi-stage job processing each comic page through contour/speech balloon detection → OCR → LLM translation → background inpainting → typography re-render.
+  - *Parallel Asynchronous Ingestion*: Multiple pages processed concurrently with real-time SSE progress streaming to connected clients.
+  - *Multi-Provider LLM Integration*: Unified interface abstracting Anthropic Claude, OpenAI GPT, and local Ollama instances for offline or private translation workflows.
+  - *Hybrid Polyglot Runtime*: Go orchestrator handling HTTP requests, job queues, and SSE, alongside a persistent Python worker running manga-ocr in GPU/CPU memory to eliminate warm-up latency.
+  - *Single-Command Deployment*: Packaged as a turnkey multi-container Docker Compose stack.
+- **Tech Stack**: Go, Python, FastAPI, OpenCV, manga-ocr, Svelte 5, Docker
 
 ### 6. Acerola Relay
-- **Description**: Peer-to-peer sync and relay server for the Acerola ecosystem. Connects desktop, mobile, and translator clients over NAT-traversing iroh protocols.
-- **Tech Stack**: Rust, iroh, SQLite, Docker.
+- **Status**: Future Idea / Architecture Defined
+- **Category**: P2P Synchronization & Relay Infrastructure
+- **Description**: Peer-to-peer sync and relay server bridging the desktop client, mobile reader, and translator in the Acerola ecosystem, ensuring libraries, reading progress, and translated files stay synchronized across devices without a central cloud database.
+- **Key Architectural Highlights**:
+  - *Decentralized P2P with iroh*: Built on top of the iroh QUIC protocol for direct peer-to-peer connectivity, penetrating corporate NATs and router firewalls without manual port forwarding.
+  - *Secure Zero-Config Remote Access*: Exposes local comic libraries securely to mobile devices away from home without VPN setup.
+  - *Multi-Device State Consistency*: Synchronizes reading progress, bookmarks, and translated files between Android and desktop automatically.
+  - *Lightweight Self-Hosting*: Minimal memory footprint packaged as a standalone Docker container suitable for Raspberry Pi, home labs, or budget VPS instances.
+- **Tech Stack**: Rust, iroh (QUIC), SQLite, Docker
 
 ---
 
-## Contact Information
-- **Portfolio Site**: https://vinicius-gpl.com
+## Contact Channels & Verification
+
+- **Website (PT-BR)**: https://vinicius-gpl.com/
+- **Website (EN)**: https://vinicius-gpl.com/en
 - **GitHub**: https://github.com/vinicius-gpl
+- **Email**: contact@vinicius-gpl.com
+- **WhatsApp**: https://wa.me/5562992952214 (+55 62 99295-2214)
+- **Curriculum Vitae**: https://curriculum.vinicius-gpl.com/Vinicius%20Gabriel%20Pereira%20Leitao.pdf
+- **Sitemap**: https://vinicius-gpl.com/sitemap.xml
