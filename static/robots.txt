@@ -1,20 +1,154 @@
-# Allow crawling for all web crawlers and AI agents by default
+# ==============================================================================
+# robots.txt - Vinícius GPL Portfolio (https://vinicius-gpl.com)
+# ==============================================================================
+
+# Default rule for all web crawlers and search engine spiders
 User-agent: *
 Allow: /
+Disallow: /api/
 
-# Explicit rules for major LLM & AI Crawlers
+# ------------------------------------------------------------------------------
+# Major Search Engine Spiders (Explicitly Allowed)
+# ------------------------------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /api/
+
+User-agent: Applebot
+Allow: /
+Disallow: /api/
+
+User-agent: YandexBot
+Allow: /
+Disallow: /api/
+
+User-agent: Baiduspider
+Allow: /
+Disallow: /api/
+
+# ------------------------------------------------------------------------------
+# Major LLM, Generative AI & AI Agent Crawlers (Explicitly Allowed)
+# ------------------------------------------------------------------------------
+
+# OpenAI (ChatGPT, SearchGPT, Model Training)
 User-agent: GPTBot
 Allow: /
+Disallow: /api/
 
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+
+# Anthropic (Claude, Claude Search & Real-time Browsing)
 User-agent: ClaudeBot
 Allow: /
+Disallow: /api/
 
+User-agent: Claude-Web
+Allow: /
+Disallow: /api/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/
+
+# Perplexity AI (Perplexity Search & Pro Search Agents)
 User-agent: PerplexityBot
 Allow: /
+Disallow: /api/
 
+User-agent: Perplexity-User
+Allow: /
+Disallow: /api/
+
+# Google AI (Gemini, Vertex AI, Extended Knowledge)
 User-agent: Google-Extended
 Allow: /
+Disallow: /api/
 
-# Sitemap and LLM documentation locations
+User-agent: GoogleOther
+Allow: /
+Disallow: /api/
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /api/
+
+# Meta AI (Llama, Meta Search)
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /api/
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+Disallow: /api/
+
+User-agent: FacebookBot
+Allow: /
+Disallow: /api/
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+Disallow: /api/
+
+User-agent: cohere-training-data-crawler
+Allow: /
+Disallow: /api/
+
+# Mistral AI
+User-agent: MistralBot
+Allow: /
+Disallow: /api/
+
+# Amazon AI & Alexa
+User-agent: Amazonbot
+Allow: /
+Disallow: /api/
+
+# ByteDance (Doubao, TikTok AI)
+User-agent: Bytespider
+Allow: /
+Disallow: /api/
+
+# Common Crawl (Foundational AI dataset crawler)
+User-agent: CCBot
+Allow: /
+Disallow: /api/
+
+# You.com & DuckDuckGo AI
+User-agent: YouBot
+Allow: /
+Disallow: /api/
+
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /api/
+
+# Diffbot & Timpi
+User-agent: Diffbot
+Allow: /
+Disallow: /api/
+
+User-agent: Timpibot
+Allow: /
+Disallow: /api/
+
+# ------------------------------------------------------------------------------
+# Sitemap & LLM Machine-Readable Context Directives
+# ------------------------------------------------------------------------------
 Sitemap: https://vinicius-gpl.com/sitemap.xml
 LLMs-Txt: https://vinicius-gpl.com/llms.txt
