@@ -140,22 +140,23 @@
   - [Screenshot - Settings Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/config-screen.png)
   - [Screenshot - Network Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/network-screen.png)
 
-### 3. Auth Server
-- **Status**: Shipped / Production Ready
-- **Category**: Enterprise Identity & Access Management (IAM)
-- **Description**: Centralized authentication and identity management service with an administrative dashboard and a secure JWT API. Designed to decouple authentication logic from downstream microservices.
+### 3. Brand Maker
+- **Status**: Shipped / Live
+- **Category**: Brand Identity & AI-Agent Design System Tooling
+- **Description**: Static web app that builds a brand's visual identity on screen with a live preview and downloads a design kit that keeps the AI coding agent (Claude Code) on the standard: skills, hooks and dependency-free `.mjs` checkers, plus design tokens in CSS and Tailwind v4.
 - **Key Architectural Highlights**:
-  - *Dual-Token Architecture*: Issues short-lived access JWTs paired with long-lived refresh tokens securely stored in HttpOnly, SameSite cookies — preventing token theft through Cross-Site Scripting (XSS).
-  - *Administrative Panel*: React + TypeScript interface for full user lifecycle management: user onboarding, account activation, suspension, password resets, and role assignments.
-  - *Decoupled External Integration*: Downstream services authenticate incoming requests via a single verification endpoint without requiring direct database connections or coupling.
-  - *Production Observability*: Full interactive Swagger UI API surface documentation and Spring Boot Actuator endpoints for real-time health checks, JVM memory, and throughput metrics.
-- **Tech Stack**: Java, Spring Boot, Spring Security, React, TypeScript, JWT
+  - *Palettes, Patterns and Finishes*: 30 palettes in 7 groups, 10 interface patterns (Simple, Material 3 Expressive, Fluent 2, Carbon, Primer, shadcn, Cupertino, GOV.UK, Brutalist, Blueprint) and 7 finishes, applied live to a sample site in light and dark modes.
+  - *Design Rules*: No pure black or white, WCAG AA contrast computed live for every text/background pair, and the 7 UX laws with adjustable limits.
+  - *Agent Design Kit*: The zip ships Claude Code skills, hooks and `.mjs` scripts (with `node --test` tests) that check every edited file against the brand.
+  - *100% Static*: The kit is generated in the browser — nothing leaves the user's machine. Deployed to GitHub Pages on a custom domain, with a Caddy Docker image as an alternative.
+- **Tech Stack**: SvelteKit, Svelte 5, TypeScript, Tailwind v4, Vitest, Docker, GitHub Pages
 - **Links**:
-  - [Auth Server GitHub](https://github.com/vinicius-gpl/acerola-auth)
-  - [Preview Screenshot](https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-panel.png)
-  - [Screenshot - Login](https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-login.png)
-  - [Screenshot - Metadata](https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-metadata.png)
-  - [Screenshot - Admin Panel](https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-panel.png)
+  - [Brand Maker (live)](https://brand-maker.vinicius-gpl.com)
+  - [Brand Maker GitHub](https://github.com/vinicius-gpl/brand-maker)
+  - [Preview Banner Image](https://raw.githubusercontent.com/vinicius-gpl/brand-maker/main/docs/banner/banner.jpg)
+  - [Screenshot - Editor and Preview](https://raw.githubusercontent.com/vinicius-gpl/brand-maker/main/docs/images/editor.jpg)
+  - [Screenshot - Carbon Pattern](https://raw.githubusercontent.com/vinicius-gpl/brand-maker/main/docs/images/padrao-carbon.jpg)
+  - [Screenshot - Brand Colors and Tokens](https://raw.githubusercontent.com/vinicius-gpl/brand-maker/main/docs/images/cores-e-padroes.jpg)
 
 ### 4. Acerola Ticket
 - **Status**: Shipped / Done

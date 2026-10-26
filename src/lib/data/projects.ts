@@ -187,63 +187,73 @@ export const PROJECTS: Project[] = [
 		]
 	},
 	{
-		id: 'auth-server',
-		title: 'Auth Server',
+		id: 'brand-maker',
+		title: 'Brand Maker',
 		status: 'done',
 		desc: {
-			en: 'Centralized identity management service with an admin panel and a JWT API. Supports refresh tokens via HttpOnly cookies, user lifecycle management, Swagger docs and Actuator metrics.',
+			en: 'Builds a brand visual identity on screen with a live preview and downloads a design kit that keeps the AI agent (Claude Code) on the standard: skills, hooks and .mjs checkers, plus CSS and Tailwind tokens.',
 			'pt-br':
-				'Serviço centralizado de gestão de identidade com painel administrativo e API JWT. Suporta refresh tokens via cookies HttpOnly, ciclo de vida de usuários, Swagger e métricas via Actuator.'
+				'Monta a identidade visual de uma marca na tela com prévia ao vivo e baixa um kit de design que prende o agente de IA (Claude Code) ao padrão: skills, hooks e verificadores .mjs, mais tokens em CSS e Tailwind.'
 		},
-		tech: ['Java', 'Spring Boot', 'Spring Security', 'React', 'TypeScript', 'JWT'],
-		github: 'https://github.com/vinicius-gpl/acerola-auth',
-		preview: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-panel.png',
-		previewDimensions: { width: 1517, height: 1284 },
+		tech: [
+			'SvelteKit',
+			'Svelte 5',
+			'TypeScript',
+			'Tailwind v4',
+			'Vitest',
+			'Docker',
+			'GitHub Pages'
+		],
+		github: 'https://github.com/vinicius-gpl/brand-maker',
+		demo: 'https://brand-maker.vinicius-gpl.com',
+		preview:
+			'https://raw.githubusercontent.com/vinicius-gpl/brand-maker/main/docs/banner/banner.jpg',
+		previewDimensions: { width: 1920, height: 1080 },
 		images: [
 			{
-				title: { en: 'Login', 'pt-br': 'Login' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-login.png'
+				title: { en: 'Editor and preview', 'pt-br': 'Editor e prévia' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/brand-maker/main/docs/images/editor.jpg'
 			},
 			{
-				title: { en: 'Metadata', 'pt-br': 'Metadados' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-metadata.png'
+				title: { en: 'Carbon pattern', 'pt-br': 'Padrão Carbon' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/brand-maker/main/docs/images/padrao-carbon.jpg'
 			},
 			{
-				title: { en: 'Admin Panel', 'pt-br': 'Painel Administrativo' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-auth/main/docs/auth-panel.png'
+				title: { en: 'Brand colors and tokens', 'pt-br': 'Cores da marca e tokens' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/brand-maker/main/docs/images/cores-e-padroes.jpg'
 			}
 		],
 		highlights: [
 			{
-				title: { en: 'Token Architecture', 'pt-br': 'Arquitetura de Tokens' },
+				title: { en: 'Palettes and Patterns', 'pt-br': 'Paletas e Padrões' },
 				body: {
-					en: 'Short-lived access JWT paired with a refresh token in an HttpOnly cookie — inaccessible to JavaScript and resistant to XSS attacks.',
+					en: '30 palettes in 7 groups, 10 interface patterns (Material 3, Fluent 2, Carbon, Primer, shadcn…) and 7 finishes, all applied live to a sample site.',
 					'pt-br':
-						'Access JWT de curta duração combinado com refresh token em cookie HttpOnly — invisível para JavaScript e resistente a ataques XSS.'
+						'30 paletas em 7 grupos, 10 padrões de interface (Material 3, Fluent 2, Carbon, Primer, shadcn…) e 7 acabamentos, aplicados ao vivo num site de exemplo.'
 				}
 			},
 			{
-				title: { en: 'Admin Panel', 'pt-br': 'Painel Administrativo' },
+				title: { en: 'Design Rules', 'pt-br': 'Regras de Design' },
 				body: {
-					en: 'React frontend for full user lifecycle management: create, activate, suspend and reset passwords, filtered by role.',
+					en: 'Never pure black or white, WCAG AA contrast computed live and the 7 UX laws with adjustable limits.',
 					'pt-br':
-						'Frontend React para gerenciar o ciclo de vida completo de usuários: criar, ativar, suspender e redefinir senhas, filtrado por cargo.'
+						'Nunca preto nem branco puros, contraste WCAG AA calculado ao vivo e as 7 leis de UX com limites ajustáveis.'
 				}
 			},
 			{
-				title: { en: 'External Integration', 'pt-br': 'Integração Externa' },
+				title: { en: 'Agent Design Kit', 'pt-br': 'Kit de Design para o Agente' },
 				body: {
-					en: 'Any service validates tokens by calling a single endpoint — no shared database, no tight coupling between apps.',
+					en: 'The zip brings Claude Code skills, hooks and dependency-free .mjs scripts that check every edited file against the brand.',
 					'pt-br':
-						'Qualquer serviço valida tokens chamando um único endpoint — sem banco compartilhado, sem acoplamento entre aplicações.'
+						'O zip traz skills, hooks e scripts .mjs sem dependência que conferem cada arquivo editado contra a marca no Claude Code.'
 				}
 			},
 			{
-				title: { en: 'Observability', 'pt-br': 'Observabilidade' },
+				title: { en: '100% Static', 'pt-br': '100% Estático' },
 				body: {
-					en: 'Swagger UI for the full API surface, plus Actuator endpoints for live health checks and system metrics.',
+					en: 'The kit is generated in the browser — nothing leaves the machine. Published on GitHub Pages, with a Caddy Docker image as an option.',
 					'pt-br':
-						'Swagger UI com toda a superfície da API, mais endpoints do Actuator para health checks e métricas em tempo real.'
+						'O kit é gerado no navegador — nada sai da máquina. Publicado no GitHub Pages, com imagem Docker com Caddy como opção.'
 				}
 			}
 		]

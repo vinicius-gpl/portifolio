@@ -9,14 +9,14 @@
 	import { scrollScale } from '$lib/actions/scroll-scale';
 	import { card3D } from '$lib/actions/card-3d';
 
-	const project = PROJECTS.find((p) => p.id === 'auth-server')!;
+	const project = PROJECTS.find((p) => p.id === 'brand-maker')!;
 	const desc = $derived(getLocale() === 'pt-br' ? project.desc['pt-br'] : project.desc.en);
 
 	let detailsOpen = $state(false);
 </script>
 
 <article
-	class="grid grid-cols-1 items-center gap-8 md:grid-cols-[1.7fr_1fr]"
+	class="grid grid-cols-1 items-center gap-8 md:grid-cols-[1.5fr_1fr]"
 	use:scrollScale={{ mode: 'scrub', startScale: 0.9, exitScale: 0.96 }}
 >
 	<div
