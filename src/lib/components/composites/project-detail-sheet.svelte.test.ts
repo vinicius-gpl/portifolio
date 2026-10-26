@@ -3,7 +3,7 @@ import { render } from 'vitest-browser-svelte';
 import ProjectDetailSheet from './project-detail-sheet.svelte';
 import { PROJECTS } from '$lib/data/projects';
 
-const authServer = PROJECTS.find((p) => p.id === 'auth-server')!;
+const brandMaker = PROJECTS.find((p) => p.id === 'brand-maker')!;
 const relay = PROJECTS.find((p) => p.id === 'acerola-relay')!;
 
 function mockViewport(isMobile: boolean) {
@@ -26,7 +26,7 @@ describe('ProjectDetailSheet', () => {
 	test('sad path (desktop): renders nothing in the DOM when closed', async () => {
 		mockViewport(false);
 		render(ProjectDetailSheet, {
-			props: { project: authServer, open: false }
+			props: { project: brandMaker, open: false }
 		});
 
 		expect(document.querySelector('[role="dialog"]')).toBeNull();
@@ -35,35 +35,35 @@ describe('ProjectDetailSheet', () => {
 	test('happy path (desktop): opens as a centered dialog with the project title', async () => {
 		mockViewport(false);
 		const { getByRole } = render(ProjectDetailSheet, {
-			props: { project: authServer, open: true }
+			props: { project: brandMaker, open: true }
 		});
 
 		const dialog = getByRole('dialog');
 		await expect.element(dialog).toBeInTheDocument();
-		await expect.element(getByRole('heading', { name: authServer.title })).toBeInTheDocument();
+		await expect.element(getByRole('heading', { name: brandMaker.title })).toBeInTheDocument();
 	});
 
 	test('happy path (desktop): renders the highlights and image gallery', async () => {
 		mockViewport(false);
 		const { getByText } = render(ProjectDetailSheet, {
-			props: { project: authServer, open: true }
+			props: { project: brandMaker, open: true }
 		});
 
 		await expect
-			.element(getByText(authServer.highlights![0].title['pt-br'], { exact: true }))
+			.element(getByText(brandMaker.highlights![0].title['pt-br'], { exact: true }))
 			.toBeInTheDocument();
 		// Dialog content renders into a portal outside the render container, so
 		// query the document instead of the scoped `container`.
-		expect(document.querySelectorAll('.gallery-thumb').length).toBe(authServer.images!.length);
+		expect(document.querySelectorAll('.gallery-thumb').length).toBe(brandMaker.images!.length);
 	});
 
 	test('happy path (mobile): opens as a bottom sheet instead of a centered dialog', async () => {
 		mockViewport(true);
 		const { getByRole } = render(ProjectDetailSheet, {
-			props: { project: authServer, open: true }
+			props: { project: brandMaker, open: true }
 		});
 
-		await expect.element(getByRole('heading', { name: authServer.title })).toBeInTheDocument();
+		await expect.element(getByRole('heading', { name: brandMaker.title })).toBeInTheDocument();
 	});
 
 	test('sad path: a project without images or highlights renders without crashing', async () => {
@@ -81,7 +81,7 @@ describe('ProjectDetailSheet', () => {
 	test('happy path: clicking a gallery thumbnail opens it fullscreen', async () => {
 		mockViewport(false);
 		render(ProjectDetailSheet, {
-			props: { project: authServer, open: true }
+			props: { project: brandMaker, open: true }
 		});
 
 		expect(document.querySelector('.image-lightbox')).toBeNull();
@@ -91,13 +91,13 @@ describe('ProjectDetailSheet', () => {
 
 		await vi.waitFor(() => expect(document.querySelector('.image-lightbox')).not.toBeNull());
 		const lightboxImg = document.querySelector<HTMLImageElement>('.image-lightbox img')!;
-		expect(lightboxImg.src).toBe(authServer.images![0].url);
+		expect(lightboxImg.src).toBe(brandMaker.images![0].url);
 	});
 
 	test('happy path: clicking the lightbox backdrop closes it again', async () => {
 		mockViewport(false);
 		render(ProjectDetailSheet, {
-			props: { project: authServer, open: true }
+			props: { project: brandMaker, open: true }
 		});
 
 		document.querySelector<HTMLButtonElement>('.gallery-thumb')!.click();
@@ -111,7 +111,7 @@ describe('ProjectDetailSheet', () => {
 	test('happy path: clicking outside the image on the lightbox container closes it', async () => {
 		mockViewport(false);
 		render(ProjectDetailSheet, {
-			props: { project: authServer, open: true }
+			props: { project: brandMaker, open: true }
 		});
 
 		document.querySelector<HTMLButtonElement>('.gallery-thumb')!.click();
@@ -125,7 +125,7 @@ describe('ProjectDetailSheet', () => {
 	test('sad path: clicking the lightbox image itself does not close it', async () => {
 		mockViewport(false);
 		render(ProjectDetailSheet, {
-			props: { project: authServer, open: true }
+			props: { project: brandMaker, open: true }
 		});
 
 		document.querySelector<HTMLButtonElement>('.gallery-thumb')!.click();
@@ -140,7 +140,7 @@ describe('ProjectDetailSheet', () => {
 	test('happy path: closing the lightbox (close button) leaves the underlying dialog open', async () => {
 		mockViewport(false);
 		render(ProjectDetailSheet, {
-			props: { project: authServer, open: true }
+			props: { project: brandMaker, open: true }
 		});
 
 		document.querySelector<HTMLButtonElement>('.gallery-thumb')!.click();

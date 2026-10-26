@@ -3,7 +3,7 @@
 	import ProjectCard from '../composites/project-card.svelte';
 	import AcerolaAndroidFeature from '../composites/projects/acerola-android-feature.svelte';
 	import AcerolaDesktopFeature from '../composites/projects/acerola-desktop-feature.svelte';
-	import AuthServerFeature from '../composites/projects/auth-server-feature.svelte';
+	import BrandMakerFeature from '../composites/projects/brand-maker-feature.svelte';
 	import AcerolaTicketFeature from '../composites/projects/acerola-ticket-feature.svelte';
 	import { intersect } from '$lib/actions/intersect';
 	import { scrollReveal } from '$lib/actions/scroll-reveal';
@@ -34,7 +34,7 @@
 	<div class="flex flex-col gap-16">
 		<AcerolaAndroidFeature />
 		<AcerolaDesktopFeature />
-		<AuthServerFeature />
+		<BrandMakerFeature />
 		<AcerolaTicketFeature />
 	</div>
 
