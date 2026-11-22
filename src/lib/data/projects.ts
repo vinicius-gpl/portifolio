@@ -259,8 +259,8 @@ export const PROJECTS: Project[] = [
 		]
 	},
 	{
-		id: 'acerola-ticket',
-		title: 'Acerola Ticket',
+		id: 'ticket-os',
+		title: 'ticket-os',
 		status: 'done',
 		desc: {
 			en: 'IT management platform with support tickets, computer inventory, maintenance and a systems Kanban integrated with GitHub. Includes a Windows agent for monitoring and automatic updates.',
@@ -268,42 +268,30 @@ export const PROJECTS: Project[] = [
 				'Plataforma de gestão de TI com chamados, inventário de computadores, manutenção e Kanban de sistemas integrado ao GitHub. Inclui agente Windows para monitoramento e atualizações automáticas.'
 		},
 		tech: ['TypeScript', 'SvelteKit', 'NestJS', 'PostgreSQL', 'Drizzle', 'Go', 'Docker'],
-		github: 'https://github.com/vinicius-gpl/acerola-ticket',
+		github: 'https://github.com/vinicius-gpl/ticket-os',
 		preview:
-			'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/brag/brag.jpg',
+			'https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/brag/brag.jpg',
 		previewDimensions: { width: 1920, height: 1080 },
 		images: [
 			{
 				title: { en: 'Infrastructure Dashboard', 'pt-br': 'Painel de Infraestrutura' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/infra-painel.jpg'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/prints/infra-painel.jpg'
 			},
 			{
 				title: { en: 'Infrastructure Tickets', 'pt-br': 'Chamados de Infraestrutura' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/infra-chamados.jpg'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/prints/infra-chamados.jpg'
 			},
 			{
-				title: { en: 'Windows Agent', 'pt-br': 'Agente Windows' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/infra-agente-windows.jpg'
+				title: { en: 'Infrastructure Inventory', 'pt-br': 'Inventário de Infraestrutura' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/prints/infra-inventario.jpg'
 			},
 			{
-				title: { en: 'Systems and Projects', 'pt-br': 'Sistemas e Projetos' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-projetos.jpg'
-			},
-			{
-				title: { en: 'Systems Tickets', 'pt-br': 'Chamados de Sistemas' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-chamados.jpg'
-			},
-			{
-				title: { en: 'Systems Kanban', 'pt-br': 'Kanban de Sistemas' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-kanban.jpg'
-			},
-			{
-				title: { en: 'Systems Timeline', 'pt-br': 'Cronograma de Sistemas' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-cronograma.jpg'
+				title: { en: 'Infrastructure Insights', 'pt-br': 'Inteligência de Infraestrutura' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/prints/infra-inteligencia.jpg'
 			},
 			{
 				title: { en: 'Maintenance Inventory', 'pt-br': 'Inventário de Manutenção' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/manutencao-inventario.jpg'
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/prints/manutencao-inventario.jpg'
 			}
 		],
 		highlights: [
