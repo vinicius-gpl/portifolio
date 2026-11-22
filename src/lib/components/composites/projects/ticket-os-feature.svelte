@@ -9,7 +9,7 @@
 	import { scrollScale } from '$lib/actions/scroll-scale';
 	import { card3D } from '$lib/actions/card-3d';
 
-	const project = PROJECTS.find((p) => p.id === 'acerola-ticket')!;
+	const project = PROJECTS.find((p) => p.id === 'ticket-os')!;
 	const desc = $derived(getLocale() === 'pt-br' ? project.desc['pt-br'] : project.desc.en);
 
 	let detailsOpen = $state(false);

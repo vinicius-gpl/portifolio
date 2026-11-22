@@ -158,7 +158,7 @@
   - [Screenshot - Carbon Pattern](https://raw.githubusercontent.com/vinicius-gpl/brand-maker/main/docs/images/padrao-carbon.jpg)
   - [Screenshot - Brand Colors and Tokens](https://raw.githubusercontent.com/vinicius-gpl/brand-maker/main/docs/images/cores-e-padroes.jpg)
 
-### 4. Acerola Ticket
+### 4. ticket-os
 - **Status**: Shipped / Done
 - **Category**: IT Service Desk & Systems Management Platform
 - **Description**: Comprehensive IT asset management and service desk platform featuring support tickets, hardware inventory, preventive maintenance tracking, and a systems Kanban integrated with GitHub. Includes an automated Go Windows monitoring agent.
@@ -169,16 +169,13 @@
   - *Go Windows Background Agent*: Standalone Go service installed on workstation machines that captures hardware metrics and automatically updates itself to published LTS versions.
 - **Tech Stack**: TypeScript, SvelteKit, NestJS, PostgreSQL, Drizzle ORM, Go, Docker
 - **Links**:
-  - [Acerola Ticket GitHub](https://github.com/vinicius-gpl/acerola-ticket)
-  - [Preview Banner Image](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/brag/brag.jpg)
-  - [Screenshot - Infrastructure Dashboard](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/infra-painel.jpg)
-  - [Screenshot - Infrastructure Tickets](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/infra-chamados.jpg)
-  - [Screenshot - Windows Agent](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/infra-agente-windows.jpg)
-  - [Screenshot - Systems and Projects](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-projetos.jpg)
-  - [Screenshot - Systems Tickets](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-chamados.jpg)
-  - [Screenshot - Systems Kanban](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-kanban.jpg)
-  - [Screenshot - Systems Timeline](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/sistema-cronograma.jpg)
-  - [Screenshot - Maintenance Inventory](https://raw.githubusercontent.com/vinicius-gpl/acerola-ticket/main/docs/prints/manutencao-inventario.jpg)
+  - [ticket-os GitHub](https://github.com/vinicius-gpl/ticket-os)
+  - [Preview Banner Image](https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/brag/brag.jpg)
+  - [Screenshot - Infrastructure Dashboard](https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/prints/infra-painel.jpg)
+  - [Screenshot - Infrastructure Tickets](https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/prints/infra-chamados.jpg)
+  - [Screenshot - Infrastructure Inventory](https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/prints/infra-inventario.jpg)
+  - [Screenshot - Infrastructure Insights](https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/prints/infra-inteligencia.jpg)
+  - [Screenshot - Maintenance Inventory](https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/prints/manutencao-inventario.jpg)
 
 ### 5. Acerola Translator
 - **Status**: Future Idea / Architecture Defined
