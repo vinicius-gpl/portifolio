@@ -13,7 +13,13 @@ describe('Projects', () => {
 	test('renders each dedicated featured project component', async () => {
 		const { getByText } = render(Projects, { props: { projects: PROJECTS } });
 
-		for (const id of ['brand-maker', 'acerola-android', 'acerola-desktop', 'ticket-os']) {
+		for (const id of [
+			'brand-maker',
+			'acerola-android',
+			'acerola-desktop',
+			'ticket-os',
+			'acerola-sync'
+		]) {
 			const project = PROJECTS.find((p) => p.id === id)!;
 			await expect.element(getByText(project.title, { exact: true }).first()).toBeInTheDocument();
 		}

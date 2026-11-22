@@ -177,7 +177,23 @@
   - [Screenshot - Infrastructure Insights](https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/prints/infra-inteligencia.jpg)
   - [Screenshot - Maintenance Inventory](https://raw.githubusercontent.com/vinicius-gpl/ticket-os/main/docs/prints/manutencao-inventario.jpg)
 
-### 5. Acerola Translator
+### 5. Acerola Sync
+- **Status**: Shipped / Done
+- **Category**: Anime & Manga Tracking Browser Extension with Self-Hosted AniList Sync
+- **Description**: Personal AniList list mirrored on a self-hosted server and marked automatically while watching and reading. A browser extension recognizes the open episode or chapter (Sakura Mangás, MangaDex, Crunchyroll, Netflix and any site registered by URL) and a Rust server keeps everything in sync with AniList, anime and manga.
+- **Key Architectural Highlights**:
+  - *Mirrored List*: Screens read from the server's Postgres, not from AniList. Incremental sync (only what changed, almost always 1 request), full list on a chosen interval, manually or at scheduled times.
+  - *Dual Write*: Each change goes to AniList and to the mirror at the same time. With AniList down, it stays pending and is sent again later.
+  - *Tracking on Sites*: Marks the chapter after a few seconds on the page and the episode when the video passes 85%; custom sites by URL regex, with an advanced mode that reads the chapter number from the page title or a CSS selector.
+  - *New Episode Alerts*: System notification when an episode of an anime being watched comes out, and the number of titles with a new episode on the extension's icon.
+- **Tech Stack**: Rust, axum, sqlx, PostgreSQL, Svelte 5, WXT, Tailwind v4, GSAP, Docker, Ansible
+- **Links**:
+  - [Acerola Sync GitHub](https://github.com/vinicius-gpl/acerola-sync)
+  - [Preview Banner Image](https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/hero.jpg)
+  - [Screenshot - Full Page](https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/extension/prints/pagina-lista.png)
+  - [Screenshot - Popup](https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/extension/prints/popup-lista.png)
+  - [Screenshot - Title](https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/extension/prints/popup-obra.png)
+### 6. Acerola Translator
 - **Status**: Future Idea / Architecture Defined
 - **Category**: Computer Vision & AI Translation Service
 - **Description**: Automated manga and webtoon translation pipeline that detects speech balloons, runs Japanese OCR, translates dialogue using modern LLMs, cleans the original text with inpainting, and typesets translated Portuguese text.
@@ -189,7 +205,7 @@
   - *Single-Command Deployment*: Packaged as a turnkey multi-container Docker Compose stack.
 - **Tech Stack**: Go, Python, FastAPI, OpenCV, manga-ocr, Svelte 5, Docker
 
-### 6. Acerola Relay
+### 7. Acerola Relay
 - **Status**: Future Idea / Architecture Defined
 - **Category**: P2P Synchronization & Relay Infrastructure
 - **Description**: Peer-to-peer sync and relay server bridging the desktop client, mobile reader, and translator in the Acerola ecosystem, ensuring libraries, reading progress, and translated files stay synchronized across devices without a central cloud database.

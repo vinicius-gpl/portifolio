@@ -330,6 +330,80 @@ export const PROJECTS: Project[] = [
 		]
 	},
 	{
+		id: 'acerola-sync',
+		title: 'Acerola Sync',
+		status: 'done',
+		desc: {
+			en: 'Your AniList list mirrored on your own server and marked automatically while you watch and read. A browser extension recognizes the open episode or chapter and a Rust server keeps everything in sync with AniList, anime and manga.',
+			'pt-br':
+				'Sua lista do AniList espelhada num servidor seu e marcada sozinha enquanto você assiste e lê. Uma extensão de navegador reconhece o episódio ou capítulo aberto e um server em Rust mantém tudo sincronizado com o AniList, anime e mangá.'
+		},
+		tech: [
+			'Rust',
+			'axum',
+			'sqlx',
+			'PostgreSQL',
+			'Svelte 5',
+			'WXT',
+			'Tailwind v4',
+			'GSAP',
+			'Docker',
+			'Ansible'
+		],
+		github: 'https://github.com/vinicius-gpl/acerola-sync',
+		preview:
+			'https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/hero.jpg',
+		previewDimensions: { width: 1920, height: 1080 },
+		images: [
+			{
+				title: { en: 'Full page', 'pt-br': 'Página cheia' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/extension/prints/pagina-lista.png'
+			},
+			{
+				title: { en: 'Popup', 'pt-br': 'Popup' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/extension/prints/popup-lista.png'
+			},
+			{
+				title: { en: 'Title', 'pt-br': 'Obra' },
+				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/extension/prints/popup-obra.png'
+			}
+		],
+		highlights: [
+			{
+				title: { en: 'Mirrored List', 'pt-br': 'Lista Espelhada' },
+				body: {
+					en: "The screens read from the server's Postgres, not from AniList. Incremental sync (only what changed, almost always 1 request) and the full list on the interval you choose.",
+					'pt-br':
+						'As telas leem do Postgres do server, não do AniList. Sync incremental (só o que mudou, quase sempre 1 request) e lista inteira no intervalo que você escolher.'
+				}
+			},
+			{
+				title: { en: 'Dual Write', 'pt-br': 'Escrita Dupla' },
+				body: {
+					en: 'Each change goes to AniList and to the mirror at the same time. With AniList down, it stays pending and is sent again later.',
+					'pt-br':
+						'Cada mudança vai para o AniList e para o espelho na mesma hora. Com o AniList fora do ar, fica pendente e é reenviada depois.'
+				}
+			},
+			{
+				title: { en: 'Tracking on Sites', 'pt-br': 'Rastreio nos Sites' },
+				body: {
+					en: 'Marks the chapter after a few seconds on the page and the episode when the video passes 85%, on Sakura Mangás, MangaDex, Crunchyroll, Netflix and any site you add by URL.',
+					'pt-br':
+						'Marca o capítulo depois de alguns segundos na página e o episódio quando o vídeo passa de 85%, no Sakura Mangás, MangaDex, Crunchyroll, Netflix e qualquer site cadastrado pela URL.'
+				}
+			},
+			{
+				title: { en: 'New Episode Alerts', 'pt-br': 'Aviso de Episódio Novo' },
+				body: {
+					en: "System notification when an episode of an anime you are watching comes out, and the number of titles with a new episode on the extension's icon.",
+					'pt-br':
+						'Notificação do sistema quando sai episódio de um anime que você está vendo e o número de obras com episódio novo no ícone da extensão.'
+				}
+			}
+		]
+	},
+	{
 		id: 'acerola-translater',
 		title: 'Acerola Translator',
 		status: 'idea',

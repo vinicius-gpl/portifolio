@@ -5,6 +5,7 @@
 	import AcerolaDesktopFeature from '../composites/projects/acerola-desktop-feature.svelte';
 	import BrandMakerFeature from '../composites/projects/brand-maker-feature.svelte';
 	import TicketOsFeature from '../composites/projects/ticket-os-feature.svelte';
+	import AcerolaSyncFeature from '../composites/projects/acerola-sync-feature.svelte';
 	import { intersect } from '$lib/actions/intersect';
 	import { scrollReveal } from '$lib/actions/scroll-reveal';
 	import { scrollScale } from '$lib/actions/scroll-scale';
@@ -36,6 +37,7 @@
 		<AcerolaDesktopFeature />
 		<BrandMakerFeature />
 		<TicketOsFeature />
+		<AcerolaSyncFeature />
 	</div>
 
 	{#if rest.length > 0}
