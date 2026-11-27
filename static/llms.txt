@@ -106,16 +106,16 @@
   - *High-performance Reader Engine*: Flexible reading surface supporting horizontal paginated, vertical paginated, and seamless infinite webtoon scroll modes with automatic progress persistence down to the exact page.
 - **Tech Stack**: Kotlin, Jetpack Compose, Rust, Iroh, Hilt, MangaDex API, AniList API
 - **Links**:
-  - [Acerola Android GitHub](https://github.com/vinicius-gpl/acerola-reader/tree/main/acerola/android)
-  - [Acerola Monorepo GitHub](https://github.com/vinicius-gpl/acerola-reader)
+  - [Acerola Android GitHub](https://github.com/acerola-labs/acerola-reader/tree/main/acerola/android)
+  - [Acerola Monorepo GitHub](https://github.com/acerola-labs/acerola-reader)
   - [Acerola Reader Documentation](https://docs.acerola.app/)
-  - [Preview Banner Image](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/banner/acerola-android-solo.png)
-  - [Screenshot - Home Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/home-screen.png)
-  - [Screenshot - Reader Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/reader-screen.png)
-  - [Screenshot - Chapters Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/chapters-screen.png)
-  - [Screenshot - History Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/history-screen.png)
-  - [Screenshot - Settings Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/config-screen.png)
-  - [Screenshot - Network Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/network-screen.png)
+  - [Preview Banner Image](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/banner/acerola-android-solo.png)
+  - [Screenshot - Home Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/home-screen.png)
+  - [Screenshot - Reader Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/reader-screen.png)
+  - [Screenshot - Chapters Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/chapters-screen.png)
+  - [Screenshot - History Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/history-screen.png)
+  - [Screenshot - Settings Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/config-screen.png)
+  - [Screenshot - Network Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/network-screen.png)
 
 ### 2. Acerola Desktop
 - **Status**: In Development / Officially Published on Microsoft Store
@@ -129,16 +129,16 @@
   - *Code Signing & Microsoft Store*: Windows binaries signed via SignPath Foundation for open-source GPL3 compliance and officially published on the Microsoft Store.
 - **Tech Stack**: Rust, Tauri v2, Svelte 5, TypeScript, Iroh, Tailwind, Axum
 - **Links**:
-  - [Acerola Desktop GitHub](https://github.com/vinicius-gpl/acerola-reader/tree/main/acerola/desktop)
-  - [Acerola Monorepo GitHub](https://github.com/vinicius-gpl/acerola-reader)
+  - [Acerola Desktop GitHub](https://github.com/acerola-labs/acerola-reader/tree/main/acerola/desktop)
+  - [Acerola Monorepo GitHub](https://github.com/acerola-labs/acerola-reader)
   - [Acerola Reader Documentation](https://docs.acerola.app/)
-  - [Preview Banner Image](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/banner/acerola-desktop-solo.png)
-  - [Screenshot - Home Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/home-screen.png)
-  - [Screenshot - Reader Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/reader-screen.png)
-  - [Screenshot - Chapters Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/chapters-screen.png)
-  - [Screenshot - History Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/history-screen.png)
-  - [Screenshot - Settings Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/config-screen.png)
-  - [Screenshot - Network Screen](https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/network-screen.png)
+  - [Preview Banner Image](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/banner/acerola-desktop-solo.png)
+  - [Screenshot - Home Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/home-screen.png)
+  - [Screenshot - Reader Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/reader-screen.png)
+  - [Screenshot - Chapters Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/chapters-screen.png)
+  - [Screenshot - History Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/history-screen.png)
+  - [Screenshot - Settings Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/config-screen.png)
+  - [Screenshot - Network Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/network-screen.png)
 
 ### 3. Brand Maker
 - **Status**: Shipped / Live
@@ -188,11 +188,11 @@
   - *New Episode Alerts*: System notification when an episode of an anime being watched comes out, and the number of titles with a new episode on the extension's icon.
 - **Tech Stack**: Rust, axum, sqlx, PostgreSQL, Svelte 5, WXT, Tailwind v4, GSAP, Docker, Ansible
 - **Links**:
-  - [Acerola Sync GitHub](https://github.com/vinicius-gpl/acerola-sync)
-  - [Preview Banner Image](https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/hero.jpg)
-  - [Screenshot - Full Page](https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/extension/prints/pagina-lista.png)
-  - [Screenshot - Popup](https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/extension/prints/popup-lista.png)
-  - [Screenshot - Title](https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/extension/prints/popup-obra.png)
+  - [Acerola Sync GitHub](https://github.com/acerola-labs/acerola-sync)
+  - [Preview Banner Image](https://raw.githubusercontent.com/acerola-labs/acerola-sync/main/docs/github/ptbr/hero.jpg)
+  - [Screenshot - Full Page](https://raw.githubusercontent.com/acerola-labs/acerola-sync/main/docs/github/ptbr/extension/prints/pagina-lista.png)
+  - [Screenshot - Popup](https://raw.githubusercontent.com/acerola-labs/acerola-sync/main/docs/github/ptbr/extension/prints/popup-lista.png)
+  - [Screenshot - Title](https://raw.githubusercontent.com/acerola-labs/acerola-sync/main/docs/github/ptbr/extension/prints/popup-obra.png)
 ### 6. Acerola Translator
 - **Status**: Future Idea / Architecture Defined
 - **Category**: Computer Vision & AI Translation Service

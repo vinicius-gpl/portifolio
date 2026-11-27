@@ -239,7 +239,7 @@
 				</div>
 
 				<a
-					href="https://github.com/vinicius-gpl/acerola-reader"
+					href="https://github.com/acerola-labs/acerola-reader"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="inline-flex items-center gap-1.5 text-[0.75rem] font-semibold text-[var(--color-accent)] hover:underline"

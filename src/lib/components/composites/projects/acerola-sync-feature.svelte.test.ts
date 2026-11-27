@@ -40,7 +40,7 @@ describe('AcerolaSyncFeature', () => {
 		const { container } = render(AcerolaSyncFeature);
 
 		expect(container.querySelector('.desktop-img')?.getAttribute('src')).toBe(
-			'https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/hero.jpg'
+			'https://raw.githubusercontent.com/acerola-labs/acerola-sync/main/docs/github/ptbr/hero.jpg'
 		);
 		expect(project.previewDimensions).toEqual({ width: 1920, height: 1080 });
 	});
