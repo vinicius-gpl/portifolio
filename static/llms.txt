@@ -108,7 +108,7 @@
 - **Links**:
   - [Acerola Android GitHub](https://github.com/acerola-labs/acerola-reader/tree/main/acerola/android)
   - [Acerola Monorepo GitHub](https://github.com/acerola-labs/acerola-reader)
-  - [Acerola Reader Documentation](https://docs.reader.acerola.app/)
+  - [Acerola Reader Documentation](https://docs.acerola.app/)
   - [Preview Banner Image](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/banner/acerola-android-solo.png)
   - [Screenshot - Home Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/home-screen.png)
   - [Screenshot - Reader Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/reader-screen.png)
@@ -131,7 +131,7 @@
 - **Links**:
   - [Acerola Desktop GitHub](https://github.com/acerola-labs/acerola-reader/tree/main/acerola/desktop)
   - [Acerola Monorepo GitHub](https://github.com/acerola-labs/acerola-reader)
-  - [Acerola Reader Documentation](https://docs.reader.acerola.app/)
+  - [Acerola Reader Documentation](https://docs.acerola.app/)
   - [Preview Banner Image](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/banner/acerola-desktop-solo.png)
   - [Screenshot - Home Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/home-screen.png)
   - [Screenshot - Reader Screen](https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/reader-screen.png)

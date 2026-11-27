@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
 		},
 		tech: ['Kotlin', 'Jetpack Compose', 'Rust', 'Iroh', 'Hilt', 'MangaDex API', 'AniList API'],
 		github: 'https://github.com/acerola-labs/acerola-reader/tree/main/acerola/android',
-		docs: 'https://docs.reader.acerola.app/',
+		docs: 'https://docs.acerola.app/',
 		preview:
 			'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/banner/acerola-android-solo.png',
 		previewDimensions: { width: 1920, height: 1080 },
@@ -113,7 +113,7 @@ export const PROJECTS: Project[] = [
 		},
 		tech: ['Rust', 'Tauri v2', 'Svelte 5', 'TypeScript', 'Iroh', 'Tailwind'],
 		github: 'https://github.com/acerola-labs/acerola-reader/tree/main/acerola/desktop',
-		docs: 'https://docs.reader.acerola.app/',
+		docs: 'https://docs.acerola.app/',
 		preview:
 			'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/banner/acerola-desktop-solo.png',
 		previewDimensions: { width: 1920, height: 1080 },
