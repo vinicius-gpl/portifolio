@@ -38,35 +38,35 @@ export const PROJECTS: Project[] = [
 				'Leitor de mangá para Android em Kotlin e Jetpack Compose. Escaneia armazenamento local, processa CBZ/CBR e busca metadados no MangaDex/AniList.'
 		},
 		tech: ['Kotlin', 'Jetpack Compose', 'Rust', 'Iroh', 'Hilt', 'MangaDex API', 'AniList API'],
-		github: 'https://github.com/vinicius-gpl/acerola-reader/tree/main/acerola/android',
-		docs: 'https://docs.acerola.app/',
+		github: 'https://github.com/acerola-labs/acerola-reader/tree/main/acerola/android',
+		docs: 'https://docs.reader.acerola.app/',
 		preview:
-			'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/banner/acerola-android-solo.png',
+			'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/banner/acerola-android-solo.png',
 		previewDimensions: { width: 1920, height: 1080 },
 		images: [
 			{
 				title: { en: 'Home', 'pt-br': 'Início' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/home-screen.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/home-screen.png'
 			},
 			{
 				title: { en: 'Reader', 'pt-br': 'Leitor' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/reader-screen.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/reader-screen.png'
 			},
 			{
 				title: { en: 'Chapters', 'pt-br': 'Capítulos' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/chapters-screen.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/chapters-screen.png'
 			},
 			{
 				title: { en: 'History', 'pt-br': 'Histórico' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/history-screen.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/history-screen.png'
 			},
 			{
 				title: { en: 'Settings', 'pt-br': 'Configurações' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/config-screen.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/config-screen.png'
 			},
 			{
 				title: { en: 'Network', 'pt-br': 'Rede' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/android/prints/network-screen.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/android/prints/network-screen.png'
 			}
 		],
 		highlights: [
@@ -112,35 +112,35 @@ export const PROJECTS: Project[] = [
 				'Leitor de quadrinhos desktop multiplataforma em Rust e Tauri. Lê CBZ, CBR e PDF, gerencia biblioteca local, faz streaming de páginas via HTTP para celular e conecta ao plugin de tradução com IA.'
 		},
 		tech: ['Rust', 'Tauri v2', 'Svelte 5', 'TypeScript', 'Iroh', 'Tailwind'],
-		github: 'https://github.com/vinicius-gpl/acerola-reader/tree/main/acerola/desktop',
-		docs: 'https://docs.acerola.app/',
+		github: 'https://github.com/acerola-labs/acerola-reader/tree/main/acerola/desktop',
+		docs: 'https://docs.reader.acerola.app/',
 		preview:
-			'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/banner/acerola-desktop-solo.png',
+			'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/banner/acerola-desktop-solo.png',
 		previewDimensions: { width: 1920, height: 1080 },
 		images: [
 			{
 				title: { en: 'Home', 'pt-br': 'Início' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/home-screen.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/home-screen.png'
 			},
 			{
 				title: { en: 'Reader', 'pt-br': 'Leitor' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/reader-screen.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/reader-screen.png'
 			},
 			{
 				title: { en: 'Chapters', 'pt-br': 'Capítulos' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/chapters-screen.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/chapters-screen.png'
 			},
 			{
 				title: { en: 'History', 'pt-br': 'Histórico' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/history-screen.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/history-screen.png'
 			},
 			{
 				title: { en: 'Settings', 'pt-br': 'Configurações' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/config-screen.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/config-screen.png'
 			},
 			{
 				title: { en: 'Network', 'pt-br': 'Rede' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-reader/main/docs/github/ptbr/desktop/prints/network-screen.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-reader/main/docs/github/ptbr/desktop/prints/network-screen.png'
 			}
 		],
 		highlights: [
@@ -350,22 +350,22 @@ export const PROJECTS: Project[] = [
 			'Docker',
 			'Ansible'
 		],
-		github: 'https://github.com/vinicius-gpl/acerola-sync',
+		github: 'https://github.com/acerola-labs/acerola-sync',
 		preview:
-			'https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/hero.jpg',
+			'https://raw.githubusercontent.com/acerola-labs/acerola-sync/main/docs/github/ptbr/hero.jpg',
 		previewDimensions: { width: 1920, height: 1080 },
 		images: [
 			{
 				title: { en: 'Full page', 'pt-br': 'Página cheia' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/extension/prints/pagina-lista.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-sync/main/docs/github/ptbr/extension/prints/pagina-lista.png'
 			},
 			{
 				title: { en: 'Popup', 'pt-br': 'Popup' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/extension/prints/popup-lista.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-sync/main/docs/github/ptbr/extension/prints/popup-lista.png'
 			},
 			{
 				title: { en: 'Title', 'pt-br': 'Obra' },
-				url: 'https://raw.githubusercontent.com/vinicius-gpl/acerola-sync/main/docs/github/ptbr/extension/prints/popup-obra.png'
+				url: 'https://raw.githubusercontent.com/acerola-labs/acerola-sync/main/docs/github/ptbr/extension/prints/popup-obra.png'
 			}
 		],
 		highlights: [
